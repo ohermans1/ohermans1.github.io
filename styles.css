@@ -12,18 +12,18 @@ body {
     margin: 10%;
     padding: 3%;
     background-color: white;
+    align-items: center;
+    justify-content: center;
     }
 
 .signuph1 {
     width: 100%;
     text-align: center;
+   
 }
 
 .item {
     width: fit-content;
-    position: relative;
-    left: 40%;
-    margin: 50px 0 50px 0;
 }
 
 
