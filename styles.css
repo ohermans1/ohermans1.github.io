@@ -9,7 +9,7 @@ body {
     flex-wrap: wrap;
     border: 5px solid lightgray;
     border-radius: 100px;
-    margin: 10%;
+    margin: 5% 10% 10% 10%;
     padding: 3%;
     background-color: white;
     align-items: center;
@@ -28,6 +28,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 
@@ -67,4 +68,23 @@ body {
   .button1div:hover {
     background-color: #017a9b;
   }
-  
+
+  /* Button 2 */
+
+  .button2 {
+      font: normal normal bold 20px comfortaa;
+      width: 100px;
+      height: 100px;
+      transition-duration: 1s;
+      border-radius: 10px;
+      color: white;
+      background-color: black;
+  }
+
+  .button2:hover {
+      width:150px;
+      height:150px;
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 0 20px black;
+  }
