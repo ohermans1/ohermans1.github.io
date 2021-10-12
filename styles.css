@@ -89,3 +89,24 @@ body {
       color: black;
       box-shadow: 0 0 0 20px black;
   }
+
+  /* Button 3 */
+
+  .button3 {
+    font: normal normal bold 20px comfortaa;
+    height: 150px;
+    width: 20px;
+    color: darkblue;
+    background-color: darkblue;
+    border: 0;
+    font-size: 0px ;
+    transition-duration: 3s;
+    
+}
+
+.button3:hover {
+    transform:rotate(90deg);
+    transform:skew(50px);
+    font: normal normal bold 20px comfortaa;
+    
+}
