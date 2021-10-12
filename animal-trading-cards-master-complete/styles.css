@@ -1,0 +1,59 @@
+/* add your CSS here */
+body {
+    font-family: "Futura Condensed Medium", sans-serif;
+}
+
+.container {
+    float: left;
+    margin: 10px;
+    box-shadow: 4px 4px gray;    
+}
+
+.card {
+    width: 320px;
+    border: 8px groove #e1bc45;
+    background-image: radial-gradient(#d6ab84, #d3c1b0);
+ }
+
+ .info {
+     width: 310px;
+     border: 5px;
+ }
+
+.name {
+    margin: 10px;
+    width: 50%;
+    border-bottom: 1px solid lightgray;
+}
+
+img {
+    width: 300px;
+    margin: 4px;
+    border: 3px groove #cdb773;
+    }
+
+.fact {
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.list {
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    list-style-type: none;
+    width: 250px;
+    margin-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.label {
+    font-weight: bold;
+    }
+
+.description {
+    border: 3px groove #cdb773;
+    width: 75%;
+    margin-left: 35px;
+    padding: 1px;
+   }
