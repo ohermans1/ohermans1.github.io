@@ -1,0 +1,65 @@
+body {
+    font-family: Comfortaa;
+    background: linear-gradient(#A8B5E0, #DAF0F7) fixed;
+   
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid lightgray;
+    border-radius: 100px;
+    margin: 10%;
+    padding: 3%;
+    background-color: white;
+    }
+
+.signuph1 {
+    width: 100%;
+    text-align: center;
+}
+
+.item {
+    width: fit-content;
+    position: relative;
+    left: 40%;
+}
+
+
+
+
+/* Button 1 */
+
+.button1 {
+    position: relative;
+    top: 60px;
+    border: 0;
+    height: 75px;
+    width: 175px;
+    font: normal normal bold 20px comfortaa;
+    border-radius: 30px 5px 30px 5px;
+    background-color: #017a9b;
+    color: white;
+    transition-duration: 2s;
+    }
+  
+  .button1:hover {
+    border-radius: 5px 30px 5px 30px;
+    color: #017a9b;
+    background-color: white;
+    transform: rotate(720deg);
+  }
+  
+  .button1div { 
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    background-color: white;
+    border-radius: 100px;
+    transition-duration: 2s;
+  }
+  
+  .button1div:hover {
+    background-color: #017a9b;
+  }
+  
