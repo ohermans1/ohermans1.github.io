@@ -1,12 +1,11 @@
 body {
   font-family: Comfortaa;
-  background: linear-gradient(#A8B5E0, #DAF0F7) fixed;
- 
+  background: linear-gradient(#a8b5e0, #daf0f7) fixed;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   border: 5px solid lightgray;
   border-radius: 100px;
@@ -16,25 +15,21 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 20px 20px 0 rgb(122, 122, 197);
-  }
+}
 
 .signuph1 {
   width: 100%;
   text-align: center;
- 
 }
 
 .item {
-  width: 100%;
+  width: 30%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
 }
-
-
-
 
 /* Button 1 */
 
@@ -49,7 +44,7 @@ body {
   background-color: #017a9b;
   color: white;
   transition-duration: 2s;
-  }
+}
 
 .button1:hover {
   border-radius: 5px 30px 5px 30px;
@@ -58,7 +53,7 @@ body {
   transform: rotate(720deg);
 }
 
-.button1div { 
+.button1div {
   width: 300px;
   height: 200px;
   text-align: center;
@@ -74,21 +69,21 @@ body {
 /* Button 2 */
 
 .button2 {
-    font: normal normal bold 20px comfortaa;
-    width: 100px;
-    height: 100px;
-    transition-duration: 1s;
-    border-radius: 10px;
-    color: white;
-    background-color: black;
+  font: normal normal bold 20px comfortaa;
+  width: 100px;
+  height: 100px;
+  transition-duration: 1s;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
 }
 
 .button2:hover {
-    width:150px;
-    height:150px;
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 0 20px black;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 0 20px black;
 }
 
 /* Button 3 */
@@ -100,7 +95,7 @@ body {
   color: lightblue;
   background-color: darkblue;
   border: 0;
-  font-size: 0px ;
+  font-size: 0px;
   transition-duration: 1s;
 }
 
@@ -109,8 +104,8 @@ body {
 }
 
 .button3:hover {
-  transform:rotate(-90deg);
-  transform:skew(50px);
+  transform: rotate(-90deg);
+  transform: skew(50px);
   font: normal normal bold 20px comfortaa;
-  width: 100px;  
+  width: 100px;
 }
