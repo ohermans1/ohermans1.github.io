@@ -1,0 +1,101 @@
+html {
+  background-color: tan;
+}
+
+body {
+  font-family: Comfortaa;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.fa {
+  margin-right: 15px;
+  padding: 1px;
+}
+
+.checked {
+  color: white;
+}
+
+.unchecked {
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 3%;
+  width: 30%;
+  color: white;
+  background-color: rgb(102, 102, 102);
+  box-shadow: 10px 10px 10px #888888;
+}
+
+.item {
+  width: 100%;
+  margin-top: 10px;
+}
+
+input,
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input,
+select {
+  height: 25px;
+  font: inherit;
+}
+
+.dates {
+}
+
+.sidebyside {
+  display: inline-block;
+}
+
+.small {
+  width: 10%;
+}
+
+.proceed {
+  height: 40px;
+  margin-top: 30px;
+}
+
+.ccn {
+  width: 80%;
+}
+
+button {
+  height: 100%;
+  width: 100px;
+  font: inherit;
+  color: white;
+  font-weight: bold;
+  background-color: darkorange;
+  border: 0;
+}
+
+button:hover {
+  background-color: rgb(255, 174, 0);
+}
+
+#creditcard {
+  width: 88%;
+}
+
+.cvv {
+  margin-top: 10px;
+}

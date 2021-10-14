@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Secure Payment Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item header">
+        <h1>Payment</h1>
+        <p>Please provide your payment details below</p>
+      </div>
+      <div class="item icons">
+        <i class="fa fa-cc-visa checked" style="font-size: 48px"></i>
+        <i class="fa fa-cc-mastercard unchecked" style="font-size: 48px"></i>
+        <i class="fa fa-cc-amex unchecked" style="font-size: 48px"></i>
+        <i class="fa fa-google-wallet unchecked" style="font-size: 48px"></i>
+        <i class="fa fa-paypal unchecked" style="font-size: 48px"></i>
+      </div>
+      <div class="item selector">
+        <label for="paymenttype">Payment Method</label>
+        <select id="paymenttype" name="paymenttype">
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="american-express">American Express</option>
+          <option value="googlepay">Google Pay</option>
+          <option value="paypal">Paypal</option>
+        </select>
+      </div>
+      <div class="item name">
+        <div class="sidebyside">
+          <label for="firstname">First Name</label
+          ><input id="firstname" type="text" placeholder="John" />
+        </div>
+        <div class="sidebyside">
+          <label for="lastname">Last Name</label
+          ><input id for="lastname" type="text" placeholder="Dow" />
+        </div>
+      </div>
+      <div class="item ccn">
+        <label for="creditcard">Credit Card Number</label
+        ><input
+          id="creditcard"
+          type="number"
+          placeholder="XXXX-XXXX-XXXX-XXXX"
+        />
+      </div>
+      <div class="item cvvexpiry">
+        <label for="expiry">Expiry Date</label>
+        <div class="dates">
+          <input
+            class="sidebyside small"
+            id="expiry"
+            type="number"
+            placeholder="MM"
+          />
+          <input
+            class="sidebyside small"
+            id="expiry"
+            type="number"
+            placeholder="YYYY"
+          />
+        </div>
+        <label class="cvv" for="CVV">CVV</label
+        ><input class="small" id="CVV" type="number" placeholder="XXX" />
+      </div>
+      <div class="item proceed">
+        <button>Proceed</button>
+      </div>
+    </div>
+  </body>
+</html>
