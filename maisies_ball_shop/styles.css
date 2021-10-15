@@ -16,7 +16,7 @@ body {
   width: 100%;
   height: 10%;
   background-color: #275059;
-  padding: 15px 0 15px 100px;
+  padding: 2% 0 2% 6.5%;
   font-size: 200%;
   color: white;
 }
@@ -55,7 +55,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 10px 10px 100px;
+  padding: 1% 0 1% 6.5%;
   color: white;
   background-color: #186e6c;
 }
@@ -109,7 +109,7 @@ h3 {
 }
 
 .foot {
-  padding: 50px 10px 30px 100px;
+  padding: 2% 0 2% 6.5%;
   width: 100%;
 }
 
