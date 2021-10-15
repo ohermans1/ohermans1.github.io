@@ -54,7 +54,7 @@ h3 {
 .linkcontainer {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: auto;
   padding: 1% 0 1% 6.5%;
   color: white;
   background-color: #186e6c;
