@@ -24,7 +24,7 @@ button {
   border: 5px inset gray;
   grid-column: span 4;
   grid-row: span 2;
-  font-size: 2rem;
+  font-size: 6vh;
   padding: 0.7rem;
   text-align: right;
   background-color: #d5e3e4;
@@ -58,7 +58,7 @@ button {
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
   display: grid;
   grid-template: repeat(7, 1fr) / repeat(4, 1fr);
-  margin: 1vh 15vw 0 auto;
+  margin: 5vh 15vw 0 auto;
   width: 30vw;
   height: 70vh;
   padding: 1rem;
