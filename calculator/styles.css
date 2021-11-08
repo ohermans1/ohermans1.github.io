@@ -58,7 +58,7 @@ button {
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
   display: grid;
   grid-template: repeat(7, 1fr) / repeat(4, 1fr);
-  margin: 0 8% 0 auto;
+  margin: 8% 8% 0 auto;
   width: 30vw;
   height: 70vh;
   padding: 1rem;
