@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pixel-art-olator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1 id="mainHeader">Pixel-art-olator</h1>
+    <div id="container">
+      <h2>Choose canvas size</h2>
+      <form id="sizePicker">
+        <div class="gridcontainer">
+          <div class="griditem1"><label for="height">Grid height:</label></div>
+          <div class="griditem2"><label for="width">Grid width:</label></div>
+          <div class="griditem3"><input type="number" id="heightPicker" name="height" min="1" value="20" /></div>
+          <div class="griditem4"><input type="number" id="widthPicker" name="width" min="1" value="20" /></div>
+        </div>
+        <br />
+        <input id="button" type="button" value="Submit" />
+      </form>
+      <div class="hidden">
+        <h2>Choose a colour</h2>
+        <input id="colorPicker" type="color" value="#4bd34f" />
+
+        <h2>Create your pixel art!</h2>
+        <table id="canvas"></table>
+      </div>
+    </div>
+    <!-- Javascript file is always at the bottom -->
+    <script src="designs.js"></script>
+  </body>
+</html>
