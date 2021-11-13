@@ -1,0 +1,105 @@
+/* Main document */
+
+:root {
+  /* Colors based on - https://cdn1.dotesports.com/wp-content/uploads/2021/04/11041120/228.png */
+  --dark: #2c2a2b;
+  --med: #4b4947;
+  --light: #5b5857;
+  --orange: #e89e7d;
+  --white: #d4d0cd;
+}
+
+html {
+  font-family: Cairo;
+  background-color: var(--med);
+  color: var(--white);
+  width: 100vw;
+}
+
+body {
+  width: 100%;
+}
+
+/* Header section */
+header {
+  background-color: var(--dark);
+  padding: 2%;
+  font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+}
+
+/* Main section */
+
+#main {
+  margin: 2%;
+}
+
+/* Input section */
+#projectName {
+  width: 80%;
+  height: 1.5rem;
+  padding-left: 1%;
+  background-color: var(--white);
+}
+
+#addProjectButton {
+  width: 15%;
+  height: 1.9em;
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+/* At a glance  */
+
+#atAGlanceContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3%;
+}
+
+.atAGlance {
+  background-color: var(--light);
+  padding: 1%;
+  width: 20%;
+}
+
+/* Projects */
+
+.projectButton {
+  width: 80%;
+  height: 2.5rem;
+  background-color: var(--dark);
+  color: var(--white);
+  border: 1px solid var(--orange);
+  text-align: left;
+  padding-left: 2%;
+  margin: 1% 2% 0 0;
+  font-size: 1.5rem;
+}
+
+.left {
+  float: right;
+  font-size: 1rem;
+  padding-top: 0.5%;
+  margin-right: 2%;
+}
+
+.removeProjectButton {
+  color: var(--orange);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.dropZone {
+  height: auto;
+  padding-bottom: 2%;
+}

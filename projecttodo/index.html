@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale-1.0" />
+    <meta name="description" content="This To Do list is great for tracking the progress of your personal projects" />
+    <title>Project To Do</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo" rel="stylesheet" />
+    <!-- Version of URL to appear in search engine -->
+    <link rel="canonical" href="" />
+  </head>
+
+  <body>
+    <header><span class="leftHeader">Project To Do </span><span class="date"></span></header>
+    <div id="main">
+      <!-- Input for project name -->
+      <form id="inputForm" onsubmit="return false">
+        <input type="text" id="projectName" name="projectName" placeholder="Project Name" />
+        <input id="addProjectButton" type="Button" value="Submit" />
+      </form>
+
+      <h2>At a Glance</h2>
+      <div id="atAGlanceContainer">
+        <div class="atAGlance">Total projects: <span id="totalProjects">0</span></div>
+        <div class="atAGlance">Total in progress: <span id="totalInProgress">0</span></div>
+        <div class="atAGlance">Total not started: <span id="totalNotStarted">0</span></div>
+        <div class="atAGlance">Total complete: <span id="totalComplete">0</span></div>
+      </div>
+      <h2>In Progress</h2>
+      <div id="inProgressContainer" class="dropZone" ondragover="onDragOver(event);" ondrop="onDrop(event);"></div>
+      <h2>Not Started</h2>
+      <div id="notStartedContainer" class="dropZone" ondragover="onDragOver(event);" ondrop="onDrop(event);"></div>
+      <h2>Complete</h2>
+      <div id="Complete" class="dropZone" ondragover="onDragOver(event);" ondrop="onDrop(event);"></div>
+    </div>
+    <footer></footer>
+    <!-- Javascript file is always at the bottom -->
+    <script src="script.js"></script>
+  </body>
+</html>
