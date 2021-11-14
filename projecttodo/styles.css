@@ -11,8 +11,8 @@
 
 [data-theme="light"] {
   --dark: #3190bc;
-  --med: #4db7e8;
-  --light: #6ec5ef;
+  --med: #6ec5ef;
+  --light: #4db7e8;
   --orange: #383939;
   --white: #d0e9f7;
 }
@@ -170,4 +170,58 @@ input:checked + .slider:before {
 
 #lightdark {
   margin: 3% 1% 3% 3%;
+}
+
+/* Modal  */
+
+.modalContainer {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modalContent {
+  background-color: var(--med);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid var(--orange);
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.modalClose {
+  color: var(--orange);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modalClose:hover,
+.modalClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalTextField {
+  height: auto;
+  width: 90%;
+  background-color: var(--white);
+  color: var(--dark);
+  padding: 1%;
+  display: inline-block;
+}
+
+.modalHeader {
+  width: 80%;
+  overflow: hidden;
+  float: left;
 }

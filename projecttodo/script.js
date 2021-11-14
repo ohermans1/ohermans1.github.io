@@ -93,8 +93,9 @@ var addProjectButton = document.querySelector("#addProjectButton");
 var notStarted = document.querySelector("#notStartedContainer");
 var inProgress = document.querySelector("#inProgressContainer");
 var complete = document.querySelector("#Complete");
+var modalStorage = document.querySelector(".modalStorage");
 
-var count = 0;
+var count = complete.childElementCount + notStarted.childElementCount + inProgress.childElementCount + 0;
 var notStartedArray = [];
 var inProgressArray = [];
 var completeArray = [];
@@ -139,9 +140,66 @@ addProjectButton.addEventListener("click", function addProject() {
   projectDiv.setAttribute("draggable", "true");
   projectDiv.setAttribute("ondragstart", "onDragStart(event)");
   console.log(notStartedArray);
+
+  //create Modal
+  var modalContainer = document.createElement("div");
+  var modalHeader = document.createElement("h2");
+  var modalClose = document.createElement("span");
+  var modalContent = document.createElement("div");
+  var modalTextField = document.createElement("p");
+  var modalTemp = document.createDocumentFragment();
+
+  modalContainer.className = "modalContainer";
+  modalContainer.id = "modalContainer" + count;
+  modalHeader.className = "modalHeader";
+  modalHeader.id = "modalHeader" + count;
+  modalClose.className = "modalClose";
+  modalClose.id = "modalClose" + count;
+  modalContent.className = "modalContent";
+  modalContent.id = "modalContent" + count;
+  modalTextField.className = "modalTextField";
+  modalTextField.id = "modalTextField" + count;
+
+  modalHeader.innerHTML = projectName;
+  modalClose.innerHTML = "&times;";
+  modalTextField.contentEditable = "true";
+  modalTextField.innerHTML = "Click to enter text";
+
+  modalTemp.appendChild(modalContainer);
+  modalContainer.appendChild(modalContent);
+  modalContent.appendChild(modalHeader);
+  modalContent.appendChild(modalClose);
+  modalContent.appendChild(modalTextField);
+  projectDiv.appendChild(modalTemp);
+
   setTotals();
+
   // Resetting form
   document.querySelector("#inputForm").reset();
+});
+
+document.addEventListener("click", function (e) {
+  if (e.target.className === "projectButton") {
+    console.log("clicked");
+    var styleChanger = e.target.parentElement.querySelector(".modalContainer");
+    console.log(styleChanger);
+    styleChanger.style.display = "block";
+    saveFile();
+  }
+});
+
+document.addEventListener("click", function (e) {
+  if (e.target.className === "modalClose") {
+    e.target.parentElement.parentElement.style.display = "none";
+    saveFile();
+  }
+});
+
+window.addEventListener("click", function (e) {
+  if (e.target.className === "modalContainer") {
+    e.target.style.display = "none";
+    saveFile();
+  }
 });
 
 ////////////////////
@@ -186,6 +244,7 @@ function loadFile() {
     complete.insertAdjacentHTML("beforeend", completeSaveFile);
   }
   setTotals();
+  count = complete.childElementCount + notStarted.childElementCount + inProgress.childElementCount;
 }
 
 loadFile();
@@ -203,3 +262,6 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener("change", switchTheme, false);
+
+// Create popup modal
+function createModal() {}
