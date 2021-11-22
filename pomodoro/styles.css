@@ -1,0 +1,111 @@
+/* Main document */
+
+:root {
+  --background: #e6f2fc;
+  --font: black;
+  --progress: #85cec4;
+  --progressEmpty: #e6f2fc;
+  --med: #393e46;
+  --degree: 0%;
+}
+
+[data-theme="dark"] {
+  --background: #394250;
+  --font: #eeeeee;
+  --progress: #85cec4;
+  --progressEmpty: #394250;
+  --med: #393e46;
+}
+
+html {
+  background: var(--background);
+  color: var(--font);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Round Progress Bar */
+#progressBar {
+  height: 60vh;
+  width: 60vh;
+  background: conic-gradient(var(--progress) var(--degree), var(--progressEmpty) 0);
+  border-radius: 100%;
+  background-color: #555;
+  box-shadow: 0 0 30px 5px var(--progress), inset 0 0 30px 5px var(--progress);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#progressMask {
+  height: 50vh;
+  width: 50vh;
+  background: var(--background);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 30px 5px var(--progress), 0 0 15px 2.5px var(--progress);
+}
+
+/* Timer */
+
+#timer {
+  font-size: 7vh;
+}
+
+#statusBar {
+  margin: 3vh;
+  padding: 0 1.2vh 0 1.2vh;
+  font-size: 2vh;
+}
+
+#status {
+  margin: 2vh 0 2vh 0;
+}
+
+/* Buttons */
+#buttonContainer {
+  margin-top: 12vh;
+  text-align: center;
+}
+
+#start,
+#reset {
+  margin: 0 2vw;
+  width: 20vh;
+  height: 5vh;
+  font-size: 4vh;
+  padding: auto;
+  color: var(--font);
+  background-color: var(--background);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 5px var(--progress), inset 0 0 20px 5px var(--progress);
+}
+
+footer {
+  width: 100vw;
+  text-align: right;
+}
+
+#darkmode {
+  border-radius: 10px;
+  background-color: var(--background);
+  color: var(--font);
+  padding: 1vh;
+  margin: 1vh;
+}

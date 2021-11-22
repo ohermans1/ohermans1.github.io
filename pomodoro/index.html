@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale-1.0" />
+    <meta name="description" content="Boost you productivity with this Pomodoro Timer" />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" />
+    <!-- Version of URL to appear in search engine -->
+    <link rel="canonical" href="ohermans.github.io/pomodoro" />
+  </head>
+
+  <body>
+    <!-- <header>Pomodoro Timer</header> -->
+    <main>
+      <div id="timerContainer">
+        <div id="progressBar">
+          <div id="progressMask">
+            <div id="round">Round: <span id="roundCount">1</span></div>
+            <span id="status">25 Minutes of Work</span>
+            <div id="timer"><span id="minutes">25</span> : <span id="seconds">00</span></div>
+            <div id="statusBar">Pomodoro Timer, Ready?</div>
+          </div>
+        </div>
+        <div id="buttonContainer"><button type="button" id="start">Start</button><button id="reset">Reset</button></div>
+      </div>
+    </main>
+    <footer>
+      <button id="darkmode" type="checkbox">Change to dark mode</button>
+    </footer>
+
+    <!-- Javascript file is always at the bottom -->
+    <script src="script.js"></script>
+  </body>
+</html>
