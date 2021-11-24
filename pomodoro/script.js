@@ -234,6 +234,9 @@ function startToggle() {
 
 function setToggleandDark() {
   autoStart = localStorage.getItem("autoStart");
+  if (autoStart === null) {
+    autoStart = "On";
+  }
   if (autoStart === "On") {
     autoSwitch.innerHTML = "Auto start: " + autoStart;
   } else {
