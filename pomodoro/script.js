@@ -1,11 +1,14 @@
 //! Setting Global Variables
+const body = document.getElementsByTagName("body");
 const timer = document.getElementById("timer");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 const start = document.getElementById("start");
 const roundCount = document.getElementById("roundCount");
 const reset = document.getElementById("reset");
+const skip = document.getElementById("skip");
 const toggleSwitch = document.getElementById("darkmode");
+const autoSwitch = document.getElementById("autoNext");
 var wstatus = document.getElementById("status");
 var interval = null;
 var mm = 25;
@@ -14,10 +17,12 @@ var counter = 1;
 var degree = null;
 var totalTime = 0;
 var root = document.documentElement;
-var roundNum = 1;
+var roundNum = 2;
 var progress = "working";
-var savedLightDark = localStorage.getItem("lightDark");
+var savedLightDark = "light";
 var fact = "";
+var autoStart = "On";
+var dontChangeRound = "off";
 const startsound = new Audio("mario.mp3");
 const begin = new Audio("start.mp3");
 //! API
@@ -51,6 +56,7 @@ function countDown() {
         setTime();
       }
       textContent();
+      console.log(mm + " : " + ss);
     }
     degree = 100 - ((mm * 60 + ss) / totalTime) * 100;
     progressBar();
@@ -82,6 +88,7 @@ function pauseCountDown() {
 
 //* Reset Function
 function resetCountDown() {
+  dontChangeRound = "on";
   roundSet();
   setTime();
   pauseCountDown();
@@ -100,30 +107,64 @@ function setTime() {
   });
 }
 
+//* Skip round
+function skipRound() {
+  counter++;
+  roundSet;
+  resetCountDown();
+}
+
 function roundSet() {
   if (counter % 6 === 0) {
     progress = "longbreak";
-    begin.play();
     wstatus.innerHTML = "15 Minute Break";
     mm = 15;
     ss = 00;
     root.style.setProperty("--progress", "#ef6d6d");
+    begin.play();
+    textContent();
+    if (autoStart === "Off") {
+      pauseCountDown();
+      start.innerHTML = "Start";
+      setTime();
+
+      return;
+    }
   } else if (counter % 2 === 1) {
     progress = "working";
     wstatus.innerHTML = "25 Minutes of Work";
-    begin.play();
     mm = 25;
     ss = 00;
     root.style.setProperty("--progress", "#85cec4");
-    roundCount.innerHTML = roundNum;
-    roundNum++;
+    textContent();
+    if (dontChangeRound === "off") {
+      roundCount.innerHTML = roundNum;
+      roundNum++;
+      begin.play();
+    }
+    dontChangeRound = "off";
+    if (autoStart === "Off") {
+      pauseCountDown();
+      start.innerHTML = "Start";
+      setTime();
+
+      return;
+    }
   } else if (counter % 2 === 0) {
     progress = "shortbreak";
-    begin.play();
     wstatus.innerHTML = "5 Minute Break";
     mm = 5;
     ss = 00;
     root.style.setProperty("--progress", "#ef6d6d");
+    begin.play();
+    textContent();
+    if (autoStart === "Off") {
+      pauseCountDown();
+      start.innerHTML = "Start";
+      setTime();
+
+      return;
+    }
   }
 }
 
@@ -163,7 +204,7 @@ function textContent() {
       statusContent.innerHTML = "Only 5 minutes till your dog fact.";
     }
   } else if (progress === "shortbreak") {
-    if (mm === 4 && ss === 59) {
+    if ((mm === 4 && ss === 59) || (mm === 5 && ss === 00)) {
       statusContent.innerHTML = "Take a 5 minute break, only a few seconds until a dog fact!";
     } else if (mm === 4 && ss === 45) {
       statusContent.innerHTML = fact;
@@ -176,6 +217,30 @@ function textContent() {
   if (mm === 24 && ss === 59) {
     fetchFacts();
   }
+}
+
+//* Make time automatically start next round
+function startToggle() {
+  if (autoStart === "On") {
+    autoStart = "Off";
+    autoSwitch.innerHTML = "Auto start: " + autoStart;
+    localStorage.setItem("autoStart", autoStart);
+  } else {
+    autoStart = "On";
+    autoSwitch.innerHTML = "Auto start: " + autoStart + " ";
+    localStorage.setItem("autoStart", autoStart);
+  }
+}
+
+function setToggleandDark() {
+  autoStart = localStorage.getItem("autoStart");
+  if (autoStart === "On") {
+    autoSwitch.innerHTML = "Auto start: " + autoStart;
+  } else {
+    autoSwitch.innerHTML = "Auto start: " + autoStart + " ";
+  }
+  savedLightDark = localStorage.getItem("lightDark");
+  document.documentElement.setAttribute("data-theme", savedLightDark);
 }
 
 //! Event Listeners and code
@@ -203,4 +268,11 @@ reset.addEventListener("click", function () {
 toggleSwitch.addEventListener("click", switchTheme, false);
 document.documentElement.setAttribute("data-theme", savedLightDark);
 
-//? Test Area
+//*Auto Start
+autoSwitch.addEventListener("click", startToggle);
+document.documentElement.addEventListener("load", setToggleandDark());
+
+//* Skip Round
+skip.addEventListener("click", skipRound);
+
+// Stuck with round going up when you click restart

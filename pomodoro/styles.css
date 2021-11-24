@@ -84,7 +84,8 @@ main {
 }
 
 #start,
-#reset {
+#reset,
+#skip {
   margin: 0 2vw;
   width: 20vh;
   height: 5vh;
@@ -102,7 +103,8 @@ footer {
   text-align: right;
 }
 
-#darkmode {
+#darkmode,
+#autoNext {
   border-radius: 10px;
   background-color: var(--background);
   color: var(--font);
