@@ -84,7 +84,7 @@ header {
   border-radius: 20px;
   background: var(--transparentBackground);
   margin: 4vh;
-  border: 5px solid var(--background);
+  border: 10px solid var(--background);
   background: var(--background);
   overflow: hidden;
 }
@@ -132,6 +132,17 @@ button:hover {
   padding: 2vh;
   margin: 2vh;
   border-radius: 10px;
+  vertical-align: middle;
+  height: 5%;
+}
+
+.material-icons {
+  /* vertical-align: middle; */
+  font-size: 4vh !important;
+}
+
+.featureText {
+  vertical-align: middle;
 }
 
 /* !! Scroll text */
