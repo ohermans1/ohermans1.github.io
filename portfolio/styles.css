@@ -1,0 +1,196 @@
+/*!! Color variables (for easy color changes) */
+
+:root {
+  --background: #eff0f2;
+  /* Change manually if you change --background */
+  --transparentBackground: rgba(239, 240, 242, 0.9);
+  --invertedBackground: #025625;
+  /* Change manually if you change --invertedBackground */
+  --transparentInvertedBackground: rgba(2, 86, 37, 0.9);
+  --objects: #287046;
+  --highlights: #b7bf96;
+  --fonts: #133a1b;
+  --invertedFonts: #eff0f2;
+  font-family: "Mulish", sans-serif;
+}
+
+html {
+  background: var(--invertedBackground);
+}
+
+/*!! Main body and global properties */
+
+* {
+  color: var(--fonts);
+}
+
+body {
+  width: 100vw;
+  background-image: url(img/background.jpg); /* Image credit https://www.vecteezy.com/vector-art/2791636-beautifil-palm-tree-leaf-silhouette-background-vector-illustration - Monstera Vectors by Vecteezy */
+  background-repeat: no-repeat;
+}
+
+.flex-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*!! Header */
+
+header {
+  padding: 2vh 4vh 2vh 2vh;
+  font-size: clamp(20px, 3vh, 30px);
+  border-radius: 0 0 40px 0;
+  background: var(--transparentInvertedBackground);
+  color: var(--invertedFonts);
+  width: fit-content;
+}
+
+/*!! Intro Container */
+
+#introContainer {
+  margin: 20vh 0 70vh 10vw;
+}
+
+#welcome {
+  font-size: clamp(20px, 4vw, 80px);
+  border-radius: 40px;
+  background-color: var(--transparentBackground);
+  width: fit-content;
+  padding: 2.5vh;
+}
+
+/*!! Project Cards */
+
+.allProjectCards {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: var(--invertedBackground);
+  box-sizing: border-box;
+  padding-bottom: 10vh;
+}
+
+.projectCards {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 1vw;
+  transition: opacity 1s;
+  border-radius: 20px;
+  background: var(--transparentBackground);
+  margin: 4vh;
+  border: 5px solid var(--background);
+  background: var(--objects);
+
+  overflow: hidden;
+}
+
+.projectCardLinkButton {
+  width: 40;
+  margin: auto;
+}
+
+.projectCardImage {
+  width: 100%;
+  padding-bottom: 1vh;
+  
+}
+
+.projectCardDescription {
+  width: 95%;
+  margin: auto;
+  text-align: left;
+  color: var(--invertedFonts);
+}
+
+/* !! Scroll text */
+#scroll {
+  transition: opacity 0.1s;
+  position: fixed;
+  bottom: 4vh;
+  text-align: center;
+  padding: 2vh;
+  border-radius: 40px;
+  background: var(--transparentInvertedBackground);
+  color: var(--invertedFonts);
+}
+
+/*!! Scroll divs */
+.js-scroll {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*!! Footer */
+
+footer {
+  height: 40vh;
+  background-image: url(img/footer.jpg);
+  background-size: cover;
+}
+
+/*!! Cell Phones */
+@media only screen and (max-width: 600px) {
+  .projectCards {
+    width: 90%;
+  }
+}
+
+/*!! Extra stuff */
+/* Tech Icons JS, HTML etc.
+
+/* #tech {
+    font-size: clamp(20px, 3vw, 60px);
+    padding: 2vh;
+    margin-right: 20vw;
+    }
+
+    #techTypes {
+    font-size: clamp(40px, 5vw, 90px);
+    padding: 2vh;
+    }
+
+    .fab {
+    padding: 2vh;
+    margin-right: 1vh;
+    }
+
+    .javascript {
+    color: #f0db4f;
+    }
+
+    .css {
+    color: #254cdd;
+    }
+
+    .html {
+    color: #dd4b25;
+    } */
+
+/* Test */
