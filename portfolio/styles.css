@@ -8,7 +8,7 @@
   /* Change manually if you change --invertedBackground */
   --transparentInvertedBackground: rgba(2, 86, 37, 0.9);
   --objects: #287046;
-  --highlights: #b7bf96;
+  --highlights: #d3e1d4;
   --fonts: #133a1b;
   --invertedFonts: #eff0f2;
   font-family: "Mulish", sans-serif;
@@ -85,14 +85,25 @@ header {
   background: var(--transparentBackground);
   margin: 4vh;
   border: 5px solid var(--background);
-  background: var(--highlights);
-
+  background: var(--background);
   overflow: hidden;
 }
 
-.projectCardLinkButton {
+.projectCardLinkButton,
+.moreInfo {
   width: 40;
   margin: auto;
+  color: --fonts;
+  background: var(--invertedBackground);
+  color: var(--background);
+  border-radius: 5px;
+  padding: 2vh;
+  margin: 2vh;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: var(--objects);
 }
 
 .projectCardImage {
@@ -105,6 +116,22 @@ header {
   margin: auto;
   text-align: left;
   color: var(--fonts);
+  display: flex;
+  flex-wrap: wrap;
+  color: --fonts;
+  justify-content: center;
+}
+
+.keyFeature {
+  padding: 1vh;
+  margin: 2vh;
+  width: 40%;
+  color: --fonts;
+  text-align: center;
+  border: 2px solid var(--invertedBackground);
+  padding: 2vh;
+  margin: 2vh;
+  border-radius: 10px;
 }
 
 /* !! Scroll text */
