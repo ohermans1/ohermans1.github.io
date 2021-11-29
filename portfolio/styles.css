@@ -85,7 +85,7 @@ header {
   background: var(--transparentBackground);
   margin: 4vh;
   border: 5px solid var(--background);
-  background: var(--objects);
+  background: var(--highlights);
 
   overflow: hidden;
 }
@@ -98,14 +98,13 @@ header {
 .projectCardImage {
   width: 100%;
   padding-bottom: 1vh;
-  
 }
 
 .projectCardDescription {
   width: 95%;
   margin: auto;
   text-align: left;
-  color: var(--invertedFonts);
+  color: var(--fonts);
 }
 
 /* !! Scroll text */
