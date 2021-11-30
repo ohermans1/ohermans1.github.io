@@ -74,16 +74,16 @@ header {
 }
 
 .projectCards {
-  width: 60%;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding-bottom: 1vw;
   transition: opacity 1s;
   border-radius: 20px;
   background: var(--transparentBackground);
-  margin: 4vh;
+  margin: 15vh 20vw 0 20vw;
   border: 10px solid var(--background);
   background: var(--background);
   overflow: hidden;
@@ -125,15 +125,14 @@ button:hover {
 .keyFeature {
   padding: 1vh;
   margin: 2vh;
-  width: 40%;
   color: --fonts;
   text-align: center;
-  border: 2px solid var(--invertedBackground);
   padding: 2vh;
   margin: 2vh;
   border-radius: 10px;
   vertical-align: middle;
   height: 5%;
+  box-shadow: 6px 6px 20px var(--transparentInvertedBackground);
 }
 
 .material-icons {
@@ -195,39 +194,51 @@ footer {
 /*!! Cell Phones */
 @media only screen and (max-width: 600px) {
   .projectCards {
-    width: 90%;
+    margin: 10vw;
+    transition: opacity 1s;
+  }
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(150px);
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .keyFeature {
+    margin: 3vw;
+    padding: 2vw;
+    box-shadow: 6px 6px 20px var(--transparentInvertedBackground);
   }
 }
 
-/*!! Extra stuff */
-/* Tech Icons JS, HTML etc.
+/*!! Tech Icons JS, HTML etc */
 
-/* #tech {
-    font-size: clamp(20px, 3vw, 60px);
-    padding: 2vh;
-    margin-right: 20vw;
-    }
+.tech {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
 
-    #techTypes {
-    font-size: clamp(40px, 5vw, 90px);
-    padding: 2vh;
-    }
+.fab {
+  height: 50px;
+}
 
-    .fab {
-    padding: 2vh;
-    margin-right: 1vh;
-    }
+.javascript {
+  color: #f0db4f;
+}
 
-    .javascript {
-    color: #f0db4f;
-    }
+.css {
+  color: #254cdd;
+}
 
-    .css {
-    color: #254cdd;
-    }
-
-    .html {
-    color: #dd4b25;
-    } */
+.html {
+  color: #dd4b25;
+}
 
 /* Test */
