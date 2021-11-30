@@ -8,21 +8,14 @@ body {
 }
 
 .comingSoon {
-  width: 50%;
-  height: 50%;
+  margin: 20vh 20vw;
+  width: 40vw;
+  height: 40vh;
+  padding: 10vh 10vw;
   background: #F2827F;
   color: #006E33;
   text-align: center;
-  padding: 10vh;
   border-radius: 20px;
   font-size: 10vw;
-  margin: 20vh;
 }
   
-@media screen and (max-width:601px) {
-  .comingSoon {
-  font-size:10vw;
-  margin:20vw;
-  padding:10vw;
-  }
-}
