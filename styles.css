@@ -1,111 +1,16 @@
 body {
-  font-family: Comfortaa;
+  font-family: Orbitron, san-serif;
   background: linear-gradient(#a8b5e0, #daf0f7) fixed;
+  background: #006E33;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border: 5px solid lightgray;
-  border-radius: 100px;
-  margin: 5% 25% 10% 25%;
-  padding: 3%;
-  background-color: white;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 20px 20px 0 rgb(122, 122, 197);
-}
-
-.signuph1 {
-  width: 100%;
+.comingSoon {
+  width: 50vw;
+  height: 50vh:
+  background: #F2827F;
+  color: #006E33;
   text-align: center;
+  padding: 10vh;
+  border-radius: 20px;
 }
-
-.item {
-  width: 30%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-/* Button 1 */
-
-.button1 {
-  position: relative;
-  top: 60px;
-  border: 0;
-  height: 75px;
-  width: 175px;
-  font: normal normal bold 20px comfortaa;
-  border-radius: 30px 5px 30px 5px;
-  background-color: #017a9b;
-  color: white;
-  transition-duration: 2s;
-}
-
-.button1:hover {
-  border-radius: 5px 30px 5px 30px;
-  color: #017a9b;
-  background-color: white;
-  transform: rotate(720deg);
-}
-
-.button1div {
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  background-color: white;
-  border-radius: 100px;
-  transition-duration: 2s;
-}
-
-.button1div:hover {
-  background-color: #017a9b;
-}
-
-/* Button 2 */
-
-.button2 {
-  font: normal normal bold 20px comfortaa;
-  width: 100px;
-  height: 100px;
-  transition-duration: 1s;
-  border-radius: 10px;
-  color: white;
-  background-color: black;
-}
-
-.button2:hover {
-  width: 150px;
-  height: 150px;
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 0 20px black;
-}
-
-/* Button 3 */
-
-.button3 {
-  font: normal normal bold 20px comfortaa;
-  height: 150px;
-  width: 20px;
-  color: lightblue;
-  background-color: darkblue;
-  border: 0;
-  font-size: 0px;
-  transition-duration: 1s;
-}
-
-#button3vert {
-  writing-mode: vertical-lr;
-}
-
-.button3:hover {
-  transform: rotate(-90deg);
-  transform: skew(50px);
-  font: normal normal bold 20px comfortaa;
-  width: 100px;
-}
+  
