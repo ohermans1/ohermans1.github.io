@@ -20,7 +20,9 @@ body {
 }
   
 @media screen and (max-width:601px) {
+  .comingSoon {
   font-size:10vw;
   margin:20vw;
   padding:10vw;
+  }
 }
