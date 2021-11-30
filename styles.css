@@ -4,6 +4,7 @@ body {
   background: #006E33;
   width: 100vw;
   height:auto;
+  overflow:hidden;
 }
 
 .comingSoon {
@@ -18,3 +19,6 @@ body {
   margin: 20vh;
 }
   
+@media screen and (max-width:601px) {
+  font-size:10vw;
+}
