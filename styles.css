@@ -14,7 +14,7 @@ body {
   text-align: center;
   padding: 10vh;
   border-radius: 20px;
-  font-size: 10rem;
+  font-size: clamp(5rem, 7rem, 10rem);
   margin: 20vh;
 }
   
