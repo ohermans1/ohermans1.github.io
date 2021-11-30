@@ -2,11 +2,13 @@ body {
   font-family: Orbitron, san-serif;
   background: linear-gradient(#a8b5e0, #daf0f7) fixed;
   background: #006E33;
+  width: 100vw;
+  height:auto;
 }
 
 .comingSoon {
-  width: 50vw;
-  height: 50vh:
+  width: 50%;
+  height: 50%:
   background: #F2827F;
   color: #006E33;
   text-align: center;
