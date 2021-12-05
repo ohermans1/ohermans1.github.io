@@ -83,6 +83,7 @@ header {
 .secondContact {
   font-size: clamp(20px, 3vh, 30px);
   width: 100%;
+  z-index: 100;
 }
 
 .name {
@@ -113,6 +114,7 @@ header {
 
 .second.name {
   font-weight: 600;
+  z-index: 100;
 }
 
 #secondContact {
@@ -121,7 +123,7 @@ header {
   position: sticky;
   top: 0px;
   left: 0;
-  z-index: 100;
+
   -webkit-overflow-scrolling: touch;
 }
 
