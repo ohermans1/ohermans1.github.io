@@ -3,19 +3,165 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
     <meta name="description" content="this is the text that will display for a search engine" />
-    <title>Coming Soon</title>
+    <title>Ollie Hermans</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish" />
+    <link rel="icon" type="image/png" href="img/kiwi.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
     <!-- Version of URL to appear in search engine -->
     <link rel="canonical" href="" />
+    <!-- <meta property="og:title" content="Site Title" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://my.website.com" /> -->
+    <meta property="og:image:url" content="linkimage.png" />
+    <!-- <meta property="og:description" content="" /> -->
   </head>
 
   <body>
-    <div class="comingSoon">Coming Soon</div>
+    <header>
+      <span class="name">Ollie Hermans</span>
+      <div class="icons">
+        <span class="linkedin"
+          ><a href="https://www.linkedin.com/in/olliehermans/" target="_blank"><i class="fab fa-linkedin contact allIcons"></i></a
+        ></span>
+        <span class="email"
+          ><a href="mailto:olliehermansdev@gmail.com?subject=A question for Ollie"><i class="far fa-envelope contact allIcons"></i></a
+        ></span>
+      </div>
+    </header>
+    <main>
+      <div id="introContainer">
+        <div id="welcome">
+          <span id="welcomeText">Hi, welcome to my portfolio</span>
+        </div>
+      </div>
+      <div class="allProjectCards">
+        <div class="secondContact" id="secondContact">
+          <span class="second name">Ollie Hermans</span>
+          <div class="second icons">
+            <span class="linkedin"
+              ><a href="https://www.linkedin.com/in/olliehermans/" target="_blank"><i class="fab fa-linkedin allIcons"></i></a
+            ></span>
+            <span class="email"
+              ><a href="mailto:olliehermansdev@gmail.com?subject=A question for Ollie"><i class="far fa-envelope allIcons"></i></a
+            ></span>
+          </div>
+        </div>
+
+        <!--!! Project 1 -->
+        <div class="projectCards js-scroll fade-in-bottom">
+          <img class="projectCardImage" src="img/project1.PNG" />
+          <div class="tech"><i class="fab fa-js-square javascript fa-3x"></i><i class="fab fa-css3-alt css fa-3x"></i><i class="fab fa-html5 html fa-3x"></i></div>
+          <div class="projectCardDescription">
+            <!-- <div class="keyFeature">
+              <div class="material-icons">grid_on</div>
+              <div class="featureText">CSS Grid</div>
+            </div>
+            <div class="keyFeature">
+              <div class="material-icons">web</div>
+              <div class="featureText">DOM Manipulation</div>
+            </div> -->
+          </div>
+          <div class="buttonContainer">
+            <button class="moreInfo">More information</button>
+
+            <a href="https://www.olliehermans.com/calculator/" target="_blank"> <div class="projectCardLinkButton">Visit this project</div></a>
+          </div>
+        </div>
+        <div class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>
+              The creation of this fully functional, simple calculator combined HTML, CSS and JavaScript. CSS Grid was used to accurately layout and size the individual buttons. The calculator has a
+              light CSS animation on mouse-hover to make it feel more interactive to the user. Carefully selected box shadows provide the illusion of the calculator floating on the page. <br />
+              <br />
+              The calculations are carried out using JavaScript, with numerous variables and conditional statements to control the individual buttons and allow for larger numbers. The calculator
+              screen is updated live using DOM manipulation. <br /><br />JavaScript is also used to detect the device type and resize the calculator accordingly for cross-device support. calculator
+              accordingly for cross device support.
+            </p>
+          </div>
+        </div>
+
+        <!--!! Project 2 -->
+        <div class="projectCards js-scroll fade-in-bottom">
+          <img class="projectCardImage" src="img/project2.PNG" />
+          <div class="projectCardDescription">
+            <div class="tech"><i class="fab fa-js-square javascript fa-3x"></i><i class="fab fa-css3-alt css fa-3x"></i><i class="fab fa-html5 html fa-3x"></i></div>
+          </div>
+          <div class="buttonContainer">
+            <button class="moreInfo">More information</button>
+
+            <a href="https://www.olliehermans.com/pomodoro/" target="_blank"> <div class="projectCardLinkButton">Visit this project</div></a>
+          </div>
+        </div>
+        <div class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Coming soon</p>
+          </div>
+        </div>
+
+        <!--!! Project 3 -->
+
+        <div class="projectCards js-scroll fade-in-bottom">
+          <img class="projectCardImage" src="img/project3.PNG" />
+          <div class="projectCardDescription">
+            <div class="tech"><i class="fab fa-js-square javascript fa-3x"></i><i class="fab fa-css3-alt css fa-3x"></i><i class="fab fa-html5 html fa-3x"></i></div>
+          </div>
+          <div class="buttonContainer">
+            <button class="moreInfo">More information</button>
+
+            <a href="https://www.olliehermans.com/projecttodo/" target="_blank"> <div class="projectCardLinkButton">Visit this project</div></a>
+          </div>
+        </div>
+        <div class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Coming soon</p>
+          </div>
+        </div>
+
+        <!--!! Project 4 -->
+
+        <div class="projectCards js-scroll fade-in-bottom">
+          <img class="projectCardImage" src="img/project4.PNG" />
+          <div class="projectCardDescription">
+            <div class="tech"><i class="fab fa-js-square javascript fa-3x"></i><i class="fab fa-css3-alt css fa-3x"></i><i class="fab fa-html5 html fa-3x"></i></div>
+          </div>
+          <div class="buttonContainer">
+            <button class="moreInfo">More information</button>
+
+            <a href="https://www.olliehermans.com/pixel-art/" target="_blank"> <div class="projectCardLinkButton">Visit this project</div></a>
+          </div>
+        </div>
+        <div class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Coming soon</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-center">
+        <div id="scroll">Scroll down to see my latest projects</div>
+      </div>
+    </main>
+    <footer></footer>
     <!-- Javascript file is always at the bottom -->
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/9668004ea7.js" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<!-- !! Extra Stuff-->
+<!-- Tech Icons
+<script src="https://kit.fontawesome.com/9668004ea7.js" crossorigin="anonymous"></script> -->
+<!-- TODO The tech types should be the tech icons, but when you hover over it transforms into the word.
+<div id="techTypes"><i class="fas fa-chevron-left"></i> <i class="fab fa-js-square javascript"></i><i class="fab fa-css3-alt css"></i><i class="fab fa-html5 html"></i></div> -->

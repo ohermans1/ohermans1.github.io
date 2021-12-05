@@ -1,21 +1,396 @@
-body {
-  font-family: Orbitron, san-serif;
-  background: linear-gradient(#a8b5e0, #daf0f7) fixed;
-  background: #006E33;
-  width: 100vw;
-  height:auto;
-  overflow:hidden;
+/*!! Color variables (for easy color changes) */
+
+:root {
+  --background: #eff0f2;
+  /* Change manually if you change --background */
+  --transparentBackground: rgba(239, 240, 242, 0.9);
+  --invertedBackground: #025625;
+  /* Change manually if you change --invertedBackground */
+  --transparentInvertedBackground: rgba(2, 86, 37, 0.9);
+  --moreTransparentInvertedBackground: rgba(2, 86, 37, 0.3);
+  --objects: #287046;
+  --highlights: #d3e1d4;
+  --fonts: #133a1b;
+  --invertedFonts: #eff0f2;
+
+  font-family: "Mulish", sans-serif;
 }
 
-.comingSoon {
-  margin: 20vh 20vw;
-  width: 40vw;
-  height: 40vh;
-  padding: 10vh 10vw;
-  background: #F2827F;
-  color: #006E33;
-  text-align: center;
-  border-radius: 20px;
-  font-size: 10vw;
+html {
+  background: var(--invertedBackground);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* overflow-y: overlay; */
 }
-  
+
+/*!! Scrollbar */
+@supports (overflow-y: overlay) {
+  html {
+    overflow-y: overlay;
+  }
+}
+
+*::-webkit-scrollbar {
+  display: block;
+  width: 16px;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #00000000;
+}
+
+*::-webkit-scrollbar-track-piece {
+  background-color: #00000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00000040;
+  border: 1px solid #ffffff40;
+  border-radius: 24px;
+}
+
+/*!! Main body and global properties */
+
+* {
+  color: var(--fonts);
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background-image: url(img/background.jpg); /* Image credit https://www.vecteezy.com/vector-art/2791636-beautifil-palm-tree-leaf-silhouette-background-vector-illustration - Monstera Vectors by Vecteezy */
+  background-repeat: no-repeat;
+}
+
+.flex-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*!! Header */
+
+header {
+  padding: 0 0 2vh 0;
+  font-size: clamp(20px, 3vh, 30px);
+  width: 100%;
+}
+
+.secondContact {
+  font-size: clamp(20px, 3vh, 30px);
+  width: 100%;
+}
+
+.name {
+  background: var(--transparentInvertedBackground);
+  color: var(--invertedFonts);
+  padding: 2vh 4vh 2vh 2vh;
+  border-radius: 0 0 40px 0;
+  width: fit-content;
+  float: left;
+}
+
+.icons {
+  background: var(--transparentInvertedBackground);
+  padding: 0.2vh 4vh 0.2vh 2vh;
+  border-radius: 0 0 0 40px;
+  width: fit-content;
+  float: right;
+}
+
+.contact {
+  color: var(--invertedFonts);
+}
+
+.second {
+  color: var(--fonts);
+  background: var(--transparentBackground);
+}
+
+.second.name {
+  font-weight: bold;
+}
+
+#secondContact {
+  transition: opacity 1s;
+  opacity: 0;
+  position: sticky;
+  top: 0px;
+  left: 0;
+  z-index: 100;
+  -webkit-overflow-scrolling: touch;
+}
+
+.allIcons:hover {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+  }
+  to {
+    text-shadow: 0 0 20px #ffffff;
+  }
+}
+
+/*!! Intro Container */
+
+#introContainer {
+  margin: 20vh 0 70vh 10vw;
+}
+
+#welcome {
+  font-size: clamp(20px, 4vw, 80px);
+  border-radius: 40px;
+  background-color: var(--transparentBackground);
+  width: fit-content;
+  padding: 2.5vh;
+}
+
+/*!! Project Cards */
+
+.allProjectCards {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: var(--invertedBackground);
+  box-sizing: border-box;
+  padding-bottom: 10vh;
+}
+
+.projectCards {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: opacity 1s;
+  border-radius: 20px;
+  background: var(--transparentBackground);
+  margin: 15vh 20vw 0 20vw;
+  border: 10px solid var(--background);
+  background: var(--background);
+  overflow: hidden;
+  box-shadow: 6px 6px 20px 5px var(--fonts);
+}
+
+a {
+  text-decoration: none;
+}
+
+.projectCardLinkButton,
+.moreInfo {
+  margin: 5vh;
+  color: --fonts;
+  background: var(--invertedBackground);
+  color: var(--background);
+  border-radius: 5px;
+  padding: 2vh;
+  margin: 2vh;
+  transition-duration: 0.4s;
+  border: none;
+}
+
+.projectCardLinkButton:hover,
+button:hover {
+  box-shadow: 0px 15px 25px -5px rgba(darken(rgb(0, 0, 0), 40%));
+  transform: scale(1.03);
+  background-color: var(--objects);
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectCardImage {
+  width: 100%;
+  padding-bottom: 1vh;
+}
+
+.projectCardDescription {
+  margin: auto;
+  text-align: left;
+  color: var(--fonts);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keyFeature {
+  padding: 1vh;
+  margin: 2vh;
+  color: --fonts;
+  text-align: center;
+  padding: 2vh;
+  margin: 2vh;
+  border-radius: 10px;
+  vertical-align: middle;
+  height: 5%;
+  box-shadow: 6px 6px 20px var(--moreTransparentInvertedBackground);
+}
+
+.material-icons {
+  /* vertical-align: middle; */
+  font-size: 4vh !important;
+}
+
+.featureText {
+  vertical-align: middle;
+}
+
+/* !! Scroll text */
+#scroll {
+  transition: opacity 0.1s;
+  position: fixed;
+  bottom: 4vh;
+  text-align: center;
+  padding: 2vh;
+  border-radius: 40px;
+  background: var(--transparentInvertedBackground);
+  color: var(--invertedFonts);
+}
+
+/*!! Scroll divs */
+.js-scroll {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*!! Footer */
+
+footer {
+  height: 40vh;
+  background-image: url(img/footer.jpg);
+  background-size: cover;
+}
+
+/*!! Cell Phones */
+@media only screen and (max-width: 600px) {
+  .projectCards {
+    margin: 10vw;
+    transition: opacity 1s;
+  }
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(150px);
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .keyFeature {
+    margin: 3vw;
+    padding: 2vw;
+    box-shadow: 6px 6px 20px var(--transparentInvertedBackground);
+  }
+  .tech {
+    font-size: 1vh;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh 1vh 2ch 1vh;
+  }
+}
+
+/*!! Tech Icons JS, HTML etc */
+
+.tech {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.fab {
+  margin: 2vh;
+}
+
+.javascript {
+  color: #f0db4f;
+}
+
+.css {
+  color: #254cdd;
+}
+
+.html {
+  color: #dd4b25;
+}
+
+/* Test */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
