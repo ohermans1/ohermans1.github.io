@@ -110,6 +110,7 @@ header {
 .second {
   color: var(--fonts);
   background: var(--transparentBackground);
+  box-shadow: 6px 6px 20px 0px var(--moreTransparentInvertedBackground);
 }
 
 .second.name {
