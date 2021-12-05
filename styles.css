@@ -152,6 +152,7 @@ header {
   background-color: var(--transparentBackground);
   width: fit-content;
   padding: 2.5vh;
+  box-shadow: 6px 6px 20px 0px var(--moreTransparentInvertedBackground);
 }
 
 /*!! Project Cards */
