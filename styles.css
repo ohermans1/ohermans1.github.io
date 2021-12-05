@@ -321,13 +321,17 @@ footer {
     box-shadow: 6px 6px 20px var(--transparentInvertedBackground);
   }
   .tech {
-    font-size: 1vh;
+    font-size: 1.5vh;
   }
   .icons {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1vh 1vh 2ch 1vh;
+  }
+  .projectCardLinkButton,
+  .moreInfo {
+    font-size: 1.5vh;
   }
 }
 
