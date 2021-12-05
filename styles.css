@@ -393,7 +393,7 @@ footer {
   float: right;
   font-size: 28px;
   font-weight: bold;
-  z-index: 9999;
+  z-index: 99999;
   padding: 0 1vw 1vw 1vw;
 }
 
