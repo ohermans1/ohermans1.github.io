@@ -91,7 +91,7 @@ const closeModal = (e) => {
 
 const userName = () => {
   var name = window.localStorage.getItem("name");
-  if (name === null) {
+  if (name === null || name === "null") {
     name = prompt("Hi! What is your name?");
     window.localStorage.setItem("name", name);
   }
