@@ -89,6 +89,15 @@ const closeModal = (e) => {
   }
 };
 
+const userName = () => {
+  var name = window.localStorage.getItem("name");
+  if (name === null) {
+    name = prompt("Hi! What is your name?");
+    window.localStorage.setItem("name", name);
+  }
+  document.getElementById("welcomeText").innerHTML = "Hi " + name + ", welcome to my portfolio";
+};
+
 // Code
 
 //!! Set Variables for Modals and create arrays and ids for scaling with different numbers of projects
@@ -121,6 +130,11 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("click", (e) => {
   closeModal(e);
+});
+
+//! Add username to webpage
+window.addEventListener("load", () => {
+  userName();
 });
 
 //* Test

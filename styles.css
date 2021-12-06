@@ -372,9 +372,7 @@ footer {
     padding: 2vw;
     box-shadow: 6px 6px 20px var(--transparentInvertedBackground);
   }
-  .tech {
-    font-size: 1.5vh;
-  }
+
   .icons {
     display: flex;
     flex-direction: column;
@@ -401,6 +399,12 @@ footer {
   display: flex;
   justify-content: center;
   align-content: center;
+  font-size: 5vmin;
+  filter: grayscale(100%);
+}
+
+.tech:hover {
+  filter: grayscale(0);
 }
 
 .fab {
