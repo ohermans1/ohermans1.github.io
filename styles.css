@@ -215,9 +215,10 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: var(--invertedBackground);
+  /* background: var(--invertedBackground); */
   box-sizing: border-box;
   padding-bottom: 10vh;
+  background: linear-gradient(var(--invertedBackground), var(--objects));
 }
 
 .projectCards {
@@ -234,6 +235,14 @@ header {
   background: var(--background);
   overflow: hidden;
   box-shadow: 6px 6px 20px 5px var(--fonts);
+}
+
+.projectTitle {
+  font-size: 3vmin;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2vmin;
+  text-align: left;
 }
 
 a {
