@@ -90,8 +90,58 @@ header {
   color: var(--invertedFonts);
   padding: 2vh 4vh 2vh 2vh;
   border-radius: 0 0 40px 0;
-  width: fit-content;
   float: left;
+  transition: width 10s, height 10s;
+  z-index: 50;
+  position: absolute;
+  max-width: 200px;
+  max-height: 100px;
+  width: fit-content;
+}
+
+.name:hover {
+  transition: max-width 0.5s linear, max-height 0.5s linear;
+  max-width: 1000px;
+  max-height: 1000px;
+  height: 95vh;
+  width: 30vw;
+}
+
+.aboutMe {
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: none;
+  margin: 5% 3% 5% 0;
+}
+
+.aboutMeContainer:hover > .aboutMe {
+  display: block;
+}
+
+.meImage {
+  width: 80%;
+  border-radius: 3px 3px 40px 3px;
+  opacity: 0.9;
+  box-shadow: 6px 6px 20px 0px var(--fonts);
+  display: block;
+  margin: 0 3vh 2vh 0;
+}
+
+.meImage:hover {
+  transform: scaleX(-1);
+  border-radius: 3px 3px 3px 40px;
+  box-shadow: -6px 6px 20px 0px var(--fonts);
+}
+
+.topText {
+  color: var(--invertedFonts);
+  font-size: 3vmin;
+}
+
+.bottomText {
+  color: var(--fonts);
+  font-size: 3vmin;
 }
 
 .icons {
@@ -100,6 +150,7 @@ header {
   border-radius: 0 0 0 40px;
   width: fit-content;
   float: right;
+  display: inherit;
 }
 
 .contact {
@@ -180,7 +231,6 @@ header {
   border-radius: 20px;
   background: var(--transparentBackground);
   margin: 15vh 20vw 0 20vw;
-  border: 10px solid var(--background);
   background: var(--background);
   overflow: hidden;
   box-shadow: 6px 6px 20px 5px var(--fonts);
@@ -335,6 +385,13 @@ footer {
   .moreInfo {
     font-size: 1.5vh;
   }
+  .name:hover {
+    transition: max-width 0.5s linear, max-height 0.5s linear;
+    max-width: 1000px;
+    max-height: 1000px;
+    height: 85vh;
+    width: 85vw;
+  }
 }
 
 /*!! Tech Icons JS, HTML etc */
@@ -403,3 +460,5 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*!! About Me */

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
     <meta name="description" content="this is the text that will display for a search engine" />
-    <title>Ollie Hermans</title>
+    <title>Ollie Hermans - Portfolio</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish" />
@@ -13,12 +13,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <!-- Version of URL to appear in search engine -->
-    <link rel="canonical" href="https://www.olliehermans.com/" />
-    <!-- <meta property="og:title" content="Site Title" />
+    <link rel="canonical" href="www.olliehermans.com" />
+    <meta property="og:title" content="Ollie Hermans - Portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://my.website.com" /> -->
-    <meta property="og:image:url" content="linkimage.png" />
-    <!-- <meta property="og:description" content="" /> -->
+    <meta property="og:url" content="https://www.olliehermans.com" />
+    <meta property="og:image:url" content="img/linkimage.png" />
+    <meta property="og:description" content="Welcome to my portfolio, I am a full-stack developer in training, focusing on the classic CSS, HTML and JavaScript power combo!" />
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -32,7 +32,22 @@
 
   <body>
     <header>
-      <span class="name">Ollie Hermans</span>
+      <div class="name aboutMeContainer">
+        Ollie Hermans
+        <div class="aboutMe">
+          <img class="meImage" src="img/me.png" alt="Me and my dog Maisie" />
+          <div class="topText">
+            <br />Hi, my name is Ollie, my web development journey started recently when I decided it was time to take the plunge and switch to a career I can be more passionate about. I specialize in
+            HTML, CSS and JavaScript. <br /><br />
+            My background as a business consultant for large organizations in the UK, NZ and Aus gives me a point of difference from other developers as I've spent years on the planning side.<br /><br />Aside
+            from building things on the web, I enjoy getting out in nature, diving and gardening. You can check out my gardening instagram
+            <a target="_blank" href="https://www.instagram.com/ollies.garden/"><u class="topText">here</u></a
+            >. <br /><br />
+            If your wanting a webpage with a bit of a natural spin (and a developer who is easy to work with) - flick me a message (email link at the top right of the page).
+          </div>
+        </div>
+      </div>
+
       <div class="icons">
         <span class="linkedin"
           ><a href="https://www.linkedin.com/in/olliehermans/" target="_blank"><i class="fab fa-linkedin contact allIcons"></i></a
@@ -50,7 +65,21 @@
       </div>
       <div class="allProjectCards">
         <div class="secondContact" id="secondContact">
-          <span class="second name">Ollie Hermans</span>
+          <div class="second name aboutMeContainer">
+            Ollie Hermans
+            <div class="aboutMe">
+              <img class="meImage" src="img/me.png" alt="Me and my dog Maisie" />
+              <div class="bottomText">
+                <br />Hi, my name is Ollie, my web development journey started recently when I decided it was time to take the plunge and switch to a career I can be more passionate about. I
+                specialize in HTML, CSS and JavaScript. <br /><br />
+                My background as a business consultant for large organizations in the UK, NZ and Aus gives me a point of difference from other developers as I've spent years on the planning side.<br /><br />Aside
+                from building things on the web, I enjoy getting out in nature, diving and gardening. You can check out my gardening instagram
+                <a target="_blank" href="https://www.instagram.com/ollies.garden/"><u class="bottomText">here</u></a
+                >. <br /><br />
+                If your wanting a webpage with a bit of a natural spin (and a developer who is easy to work with) - flick me a message (email link at the top right of the page).
+              </div>
+            </div>
+          </div>
           <div class="second icons">
             <span class="linkedin"
               ><a href="https://www.linkedin.com/in/olliehermans/" target="_blank"><i class="fab fa-linkedin allIcons"></i></a
@@ -63,7 +92,7 @@
 
         <!--!! Project 1 -->
         <div class="projectCards js-scroll fade-in-bottom">
-          <img class="projectCardImage" src="img/project1.PNG" alt="A Calculator"/>
+          <img class="projectCardImage" src="img/project1.PNG" alt="A calculator" />
           <div class="tech"><i class="fab fa-js-square javascript fa-3x"></i><i class="fab fa-css3-alt css fa-3x"></i><i class="fab fa-html5 html fa-3x"></i></div>
           <div class="projectCardDescription">
             <!-- <div class="keyFeature">
@@ -86,8 +115,8 @@
           <div class="modal-content">
             <span class="close">&times;</span>
             <p>
-              The creation of this simple, yet fully functional calculator combined HTML, CSS and JavaScript. CSS Grid was used to accurately layout and size the individual buttons. The calculator has a
-              light CSS animation on mouse-hover to make it feel more interactive to the user. Carefully selected box shadows provide the illusion of the calculator floating on the page. <br />
+              The creation of this simple, yet fully functional calculator combined HTML, CSS and JavaScript. CSS Grid was used to accurately layout and size the individual buttons. The calculator has
+              a light CSS animation on mouse-hover to make it feel more interactive to the user. Carefully selected box shadows provide the illusion of the calculator floating on the page. <br />
               <br />
               The calculations are carried out using JavaScript, with numerous variables and conditional statements to control the individual buttons and allow for larger numbers. The calculator
               screen is updated live using DOM manipulation. <br /><br />JavaScript is also used to detect the device type and resize the calculator accordingly for cross-device support. calculator
