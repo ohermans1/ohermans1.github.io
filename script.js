@@ -95,6 +95,9 @@ const userName = () => {
     name = prompt("Hi! What is your name?");
     window.localStorage.setItem("name", name);
   }
+  if (name === null) {
+    return;
+  }
   document.getElementById("welcomeText").innerHTML = "Hi " + name + ", welcome to my portfolio";
 };
 
