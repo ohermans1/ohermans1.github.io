@@ -1,15 +1,17 @@
 /*!! Color variables (for easy color changes) */
 
 :root {
-  --background: #eff0f2;
+  --background: #f0f0f0;
   /* Change manually if you change --background */
   --transparentBackground: rgba(239, 240, 242, 0.9);
+  --moreTransparentBackground: rgba(239, 240, 242, 0.45);
   --invertedBackground: #025625;
   --background1: #025625;
-  --background2: #eff0f2;
-  --background2transparent: rgba(89, 145, 57, 0.8);
+  --background2: #f0f0f0;
+  --transparent: rgba(89, 145, 57, 0.8);
   /* Change manually if you change --invertedBackground */
   --transparentInvertedBackground: rgba(2, 86, 37, 0.9);
+  --medTransparentInvertedBackground: rgba(2, 86, 37, 0.6);
   --moreTransparentInvertedBackground: rgba(2, 86, 37, 0.3);
   --objects: #287046;
   --highlights: #d3e1d4;
@@ -20,7 +22,7 @@
 }
 
 html {
-  background: var(--invertedBackground);
+  background: var(--background);
   scroll-behavior: smooth;
   overflow-x: hidden;
   /* overflow-y: overlay; */
@@ -131,12 +133,6 @@ header {
   margin: 0 3vh 2vh 0;
 }
 
-.meImage:hover {
-  transform: scaleX(-1);
-  border-radius: 3px 3px 3px 40px;
-  box-shadow: -6px 6px 20px 0px var(--fonts);
-}
-
 .topText {
   color: var(--invertedFonts);
   font-size: 3vmin;
@@ -231,12 +227,29 @@ header {
 }
 
 #welcome {
-  font-size: clamp(20px, 4vw, 80px);
   border-radius: 40px;
   background-color: var(--transparentBackground);
   width: fit-content;
   padding: 2.5vh;
   box-shadow: 6px 6px 20px 0px var(--moreTransparentInvertedBackground);
+  z-index: 15;
+  font-size: clamp(20px, 4vw, 80px);
+}
+
+#slogan {
+  margin: 0 0 0 3%;
+  z-index: 0;
+  font-size: clamp(10px, 2vw, 40px);
+  border-radius: 0 0 40px 40px;
+  background-color: var(--transparentInvertedBackground);
+  color: var(--invertedFonts);
+  width: fit-content;
+  padding: 2.5vh;
+  box-shadow: 6px 6px 20px 0px var(--moreTransparentInvertedBackground);
+}
+
+#sloganText {
+  color: var(--invertedFonts);
 }
 
 /*!! Project Cards */
@@ -505,4 +518,4 @@ footer {
   cursor: pointer;
 }
 
-/*!! About Me */
+/*! Loading image */
