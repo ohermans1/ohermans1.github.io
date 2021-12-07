@@ -89,6 +89,8 @@ const closeModal = (e) => {
   }
 };
 
+//!! Personalise content by asking for name
+
 const userName = () => {
   var name = window.localStorage.getItem("name");
   if (name === null || name === "null") {
@@ -99,6 +101,25 @@ const userName = () => {
     return;
   }
   document.getElementById("welcomeText").innerHTML = "Hi " + name + ", welcome to my portfolio";
+};
+
+//!! Add glow if about me hasn't been hovered
+var glow = window.localStorage.getItem("glow");
+var aboutMe1 = document.getElementById("aboutMe1");
+var aboutMe2 = document.getElementById("aboutMe2");
+
+const loadGlow = () => {
+  if (glow === null || glow === "null") {
+    aboutMe1.classList.add("borderGlow");
+    aboutMe2.classList.add("borderGlowInverted");
+  }
+};
+
+const hoverGlow = () => {
+  glow = "read";
+  aboutMe1.classList.remove("borderGlow");
+  aboutMe2.classList.remove("borderGlowInverted");
+  window.localStorage.setItem("glow", glow);
 };
 
 // Code
@@ -135,9 +156,18 @@ document.addEventListener("click", (e) => {
   closeModal(e);
 });
 
-//! Add username to webpage
+//! Add username and glow to webpage
 window.addEventListener("load", () => {
   userName();
+  loadGlow();
+});
+
+//! Glow control for aboutMe section
+aboutMe1.addEventListener("mouseover", () => {
+  hoverGlow();
+});
+aboutMe2.addEventListener("mouseover", () => {
+  hoverGlow();
 });
 
 //* Test

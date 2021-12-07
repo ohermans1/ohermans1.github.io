@@ -5,6 +5,8 @@
   /* Change manually if you change --background */
   --transparentBackground: rgba(239, 240, 242, 0.9);
   --invertedBackground: #025625;
+  --background1: #709e3c;
+  --background2: #599139;
   /* Change manually if you change --invertedBackground */
   --transparentInvertedBackground: rgba(2, 86, 37, 0.9);
   --moreTransparentInvertedBackground: rgba(2, 86, 37, 0.3);
@@ -104,7 +106,7 @@ header {
   max-width: 1000px;
   max-height: 1000px;
   height: 95vh;
-  width: 30vw;
+  width: 40vw;
 }
 
 .aboutMe {
@@ -193,6 +195,35 @@ header {
   }
 }
 
+.borderGlow {
+  -webkit-animation: borderGlow 1s ease-in-out infinite alternate;
+  -moz-animation: borderGlow 1s ease-in-out infinite alternate;
+  animation: borderGlow 1s ease-in-out infinite alternate;
+}
+
+.borderGlowInverted {
+  -webkit-animation: borderGlowInverted 1s ease-in-out infinite alternate;
+  -moz-animation: borderGlowInverted 1s ease-in-out infinite alternate;
+  animation: borderGlowInverted 1s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  from {
+    box-shadow: 0 0 5px var(--background) inset, 0 0 10px var(--background) inset;
+  }
+  to {
+    box-shadow: 0 0 10px var(--background) inset;
+  }
+}
+
+@keyframes borderGlowInverted {
+  from {
+    box-shadow: 0 0 5px var(--background1) inset, 0 0 10px var(--background1) inset;
+  }
+  to {
+    box-shadow: 0 0 10px var(--background1) inset;
+  }
+}
 /*!! Intro Container */
 
 #introContainer {
@@ -215,10 +246,9 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* background: var(--invertedBackground); */
   box-sizing: border-box;
   padding-bottom: 10vh;
-  background: linear-gradient(var(--invertedBackground), var(--objects));
+  background: linear-gradient(var(--background1), var(--background2));
 }
 
 .projectCards {
@@ -273,6 +303,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3vmin;
 }
 
 .projectCardImage {
