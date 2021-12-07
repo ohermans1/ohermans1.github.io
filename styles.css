@@ -7,6 +7,7 @@
   --invertedBackground: #025625;
   --background1: #709e3c;
   --background2: #599139;
+  --background2transparent: rgba(89, 145, 57, 0.8);
   /* Change manually if you change --invertedBackground */
   --transparentInvertedBackground: rgba(2, 86, 37, 0.9);
   --moreTransparentInvertedBackground: rgba(2, 86, 37, 0.3);
@@ -209,21 +210,20 @@ header {
 
 @keyframes borderGlow {
   from {
-    box-shadow: 0 0 5px var(--background) inset, 0 0 10px var(--background) inset;
+    background-color: var(--background2transparent);
   }
   to {
-    box-shadow: 0 0 10px var(--background) inset;
   }
 }
 
 @keyframes borderGlowInverted {
   from {
-    box-shadow: 0 0 5px var(--background1) inset, 0 0 10px var(--background1) inset;
+    background-color: var(--transparentInvertedBackground);
   }
   to {
-    box-shadow: 0 0 10px var(--background1) inset;
   }
 }
+
 /*!! Intro Container */
 
 #introContainer {
