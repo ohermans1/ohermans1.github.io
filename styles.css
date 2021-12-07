@@ -5,8 +5,8 @@
   /* Change manually if you change --background */
   --transparentBackground: rgba(239, 240, 242, 0.9);
   --invertedBackground: #025625;
-  --background1: #709e3c;
-  --background2: #599139;
+  --background1: #025625;
+  --background2: #eff0f2;
   --background2transparent: rgba(89, 145, 57, 0.8);
   /* Change manually if you change --invertedBackground */
   --transparentInvertedBackground: rgba(2, 86, 37, 0.9);
