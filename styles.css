@@ -94,7 +94,7 @@ header {
   transition: width 10s, height 10s;
   z-index: 50;
   position: absolute;
-  max-width: 200px;
+  max-width: 300px;
   max-height: 100px;
   width: fit-content;
 }
