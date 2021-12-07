@@ -206,7 +206,7 @@ header {
 
 @keyframes borderGlow {
   from {
-    background-color: var(--background2transparent);
+    background-color: var(--transparent);
   }
   to {
   }
