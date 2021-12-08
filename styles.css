@@ -365,28 +365,6 @@ button:hover {
   justify-content: center;
 }
 
-.keyFeature {
-  padding: 1vh;
-  margin: 2vh;
-  color: --fonts;
-  text-align: center;
-  padding: 2vh;
-  margin: 2vh;
-  border-radius: 10px;
-  vertical-align: middle;
-  height: 5%;
-  box-shadow: 6px 6px 20px var(--moreTransparentInvertedBackground);
-}
-
-.material-icons {
-  /* vertical-align: middle; */
-  font-size: 4vh !important;
-}
-
-.featureText {
-  vertical-align: middle;
-}
-
 /* !! Scroll text */
 #scroll {
   transition: opacity 0.1s;
