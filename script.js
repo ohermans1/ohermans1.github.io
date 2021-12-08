@@ -89,19 +89,19 @@ const closeModal = (e) => {
   }
 };
 
-//!! Personalise content by asking for name
+//!! Personalise content by asking for name - Removed for now
 
-const userName = () => {
-  var name = window.localStorage.getItem("name");
-  if (name === null || name === "null") {
-    name = prompt("Hi! What is your name?");
-    window.localStorage.setItem("name", name);
-  }
-  if (name === null) {
-    return;
-  }
-  document.getElementById("welcomeText").innerHTML = "<span class='wrap'>Hi " + name + ", welcome&nbsp;</span><span class='wrap'>to my portfolio</span>";
-};
+// const userName = () => {
+//   var name = window.localStorage.getItem("name");
+//   if (name === null || name === "null") {
+//     name = prompt("Hi! What is your name?");
+//     window.localStorage.setItem("name", name);
+//   }
+//   if (name === null) {
+//     return;
+//   }
+//   document.getElementById("welcomeText").innerHTML = "<span class='wrap'>Hi " + name + ", welcome&nbsp;</span><span class='wrap'>to my portfolio</span>";
+// };
 
 //!! Add glow if about me hasn't been hovered
 var glow = window.localStorage.getItem("glow");
@@ -166,7 +166,6 @@ document.addEventListener("click", (e) => {
 
 //! Add username and glow to webpage + Loading animation
 window.addEventListener("load", () => {
-  userName();
   loadGlow();
   loadScreen();
 });
