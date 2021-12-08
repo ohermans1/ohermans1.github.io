@@ -125,6 +125,7 @@ const hoverGlow = () => {
 const loadScreen = () => {
   setTimeout(() => {
     document.getElementById("loading").style.display = "none";
+    document.getElementById("loadImg").remove();
   }, 2000);
 };
 
@@ -162,7 +163,7 @@ document.addEventListener("click", (e) => {
   closeModal(e);
 });
 
-//! Add username and glow to webpage
+//! Add username and glow to webpage + Loading animation
 window.addEventListener("load", () => {
   userName();
   loadGlow();
