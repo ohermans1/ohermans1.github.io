@@ -412,6 +412,7 @@ footer {
 @media only screen and (max-width: 600px) {
   .projectCards {
     margin: 10vw;
+    box-shadow: 3px 3px 10px 2.5px var(--fonts);
     transition: opacity 1s;
   }
   @keyframes fade-in-bottom {
