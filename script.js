@@ -122,6 +122,12 @@ const hoverGlow = () => {
   window.localStorage.setItem("glow", glow);
 };
 
+const loadScreen = () => {
+  setTimeout(() => {
+    document.getElementById("loading").style.display = "none";
+  }, 2000);
+};
+
 // Code
 
 //!! Set Variables for Modals and create arrays and ids for scaling with different numbers of projects
@@ -160,6 +166,7 @@ document.addEventListener("click", (e) => {
 window.addEventListener("load", () => {
   userName();
   loadGlow();
+  loadScreen();
 });
 
 //! Glow control for aboutMe section

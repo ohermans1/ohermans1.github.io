@@ -83,6 +83,32 @@ body {
 }
 
 /*!! Header */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--background);
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: clamp(20px, 3vh, 30px);
+}
+
+#loadImg {
+  animation: load 3s linear infinite;
+  margin-bottom: 3vmin;
+}
+
+@keyframes load {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 
 header {
   padding: 0 0 2vh 0;
