@@ -122,10 +122,11 @@ const hoverGlow = () => {
   window.localStorage.setItem("glow", glow);
 };
 
+//! Load screen - remove load screen after page has loaded + 2 seconds.
+
 const loadScreen = () => {
   setTimeout(() => {
     document.getElementById("loading").style.display = "none";
-    document.getElementById("loadImg").remove();
   }, 2000);
 };
 
