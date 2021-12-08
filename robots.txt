@@ -1,0 +1,3 @@
+# Make nibbler ignore this site
+User-agent: nibbler
+Disallow: /
