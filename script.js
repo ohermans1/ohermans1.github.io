@@ -100,7 +100,7 @@ const userName = () => {
   if (name === null) {
     return;
   }
-  document.getElementById("welcomeText").innerHTML = "Hi " + name + ", welcome to my portfolio";
+  document.getElementById("welcomeText").innerHTML = "<span class='wrap'>Hi " + name + ", welcome&nbsp;</span><span class='wrap'>to my portfolio</span>";
 };
 
 //!! Add glow if about me hasn't been hovered

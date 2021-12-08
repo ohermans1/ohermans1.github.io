@@ -77,6 +77,11 @@ body {
   justify-content: center;
 }
 
+.wrap {
+  display: inline-block;
+  color: inherit;
+}
+
 /*!! Header */
 
 header {
@@ -233,13 +238,14 @@ header {
   padding: 2.5vh;
   box-shadow: 6px 6px 20px 0px var(--moreTransparentInvertedBackground);
   z-index: 15;
-  font-size: clamp(20px, 4vw, 80px);
+  font-size: clamp(30px, 4vw, 80px);
+  text-align: left;
 }
 
 #slogan {
-  margin: 0 0 0 3%;
+  margin: 0 0 0 5%;
   z-index: 0;
-  font-size: clamp(10px, 2vw, 40px);
+  font-size: clamp(20px, 2vw, 40px);
   border-radius: 0 0 40px 40px;
   background-color: var(--transparentInvertedBackground);
   color: var(--invertedFonts);
@@ -442,6 +448,21 @@ footer {
     max-height: 1000px;
     height: 85vh;
     width: 85vw;
+  }
+  #introContainer {
+    margin: 20vh 0 70vh 5vw;
+  }
+
+  #slogan {
+    margin-left: 8.5%;
+  }
+  #welcome {
+    width: 90%;
+    height: fit-content;
+  }
+  #slogan {
+    width: 70%;
+    height: fit-content;
   }
 }
 
