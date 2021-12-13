@@ -366,7 +366,7 @@ button:hover {
 }
 
 .topCorner {
-  background: var(--transparentInvertedBackground);
+  background: var(--invertedBackground);
   color: var(--invertedFonts);
   padding: 2vh 4vh 2vh 2vh;
   border-radius: 0 0 40px 0;
