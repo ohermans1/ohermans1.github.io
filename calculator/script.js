@@ -32,6 +32,9 @@ const saveNumbers = (value) => {
 };
 
 const operator = (value) => {
+  if (number2 != "") {
+    sum();
+  }
   inUseOperator = value;
   screenNumbers.innerHTML = number1 + " " + inUseOperator;
 };
@@ -44,7 +47,7 @@ const sum = () => {
   if (number2 === "") {
     screenNumbers.innerHTML = number1;
   }
-  answer = math.evaluate(number1 + inUseOperator + number2);
+  answer = math.evaluate(number1 + inUseOperator + number2).toFixed(0);
   screenNumbers.innerHTML = number1 + " " + inUseOperator + " " + number2 + " = " + answer;
   sassBot();
   resetAfterCalc();
@@ -161,6 +164,36 @@ const resetAfterCalc = () => {
   inUseOperator = "";
 };
 
+const keyPress = (e) => {
+  buttonValue = e.key;
+
+  if (buttonValue >= 0 && buttonValue <= 9) {
+    saveNumbers(buttonValue);
+  } else if (operators.includes(buttonValue)) {
+    operator(buttonValue);
+  } else if (buttonValue === "=") {
+    sum(buttonValue);
+  } else if (buttonValue === "c") {
+    clear(buttonValue);
+  } else if (buttonValue === ".") {
+    decimal(buttonValue);
+  } else {
+    if (frustrationMeter === 1) {
+      screenChat.innerHTML = "Umm, what are you trying to do?";
+      frustrationMeter++;
+    } else if (frustrationMeter === 2) {
+      screenChat.innerHTML = "I may be smart, but I don't take that input!";
+      frustrationMeter++;
+    } else if (frustrationMeter === 3) {
+      screenChat.innerHTML = "You are really persistent aren't you";
+      frustrationMeter++;
+    } else {
+      screenChat.innerHTML = "Screw off";
+      frustrationMeter++;
+    }
+  }
+};
+
 //!! Code
 var calculatorContainer = document.getElementById("calculator");
 var screenNumbers = document.getElementById("screenNumbers");
@@ -178,6 +211,10 @@ calculatorContainer.addEventListener("click", (e) => {
   if (frustrationMeter >= 7) {
     completeScreen.style.backgroundColor = "black";
   }
+});
+
+window.addEventListener("keypress", (e) => {
+  keyPress(e);
 });
 
 /* Pseudo Code
