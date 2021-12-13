@@ -41,6 +41,8 @@ button {
 #calcName {
   grid-column: span 4;
   height: fit-content;
+  padding: 1vmin;
+  font-weight: bold;
 }
 
 .grid-item-button + .equals {
