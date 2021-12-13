@@ -19,12 +19,15 @@ const scrollFade = () => {
   const scrollText = document.getElementById("scroll");
   if (currentScroll <= checkpoint) {
     opacity = 1 - currentScroll / checkpoint;
-    scrollText.style.opacity = opacity;
-    scrollText.style.display = "block";
   } else {
     opacity = 0;
-    scrollText.style.opacity = opacity;
+  }
+  scrollText.style.opacity = opacity;
+
+  if (opacity === 0) {
     scrollText.style.display = "none";
+  } else {
+    scrollText.style.display = "block";
   }
   // document.getElementById("scroll").style.opacity = opacity;
 };
