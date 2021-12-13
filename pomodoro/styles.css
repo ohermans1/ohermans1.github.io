@@ -37,8 +37,8 @@ main {
 
 /* Round Progress Bar */
 #progressBar {
-  height: 60vh;
-  width: 60vh;
+  height: 60vmin;
+  width: 60vmin;
   background: conic-gradient(var(--progress) var(--degree), var(--progressEmpty) 0);
   border-radius: 100%;
   background-color: #555;
@@ -50,8 +50,8 @@ main {
 }
 
 #progressMask {
-  height: 50vh;
-  width: 50vh;
+  height: 50vmin;
+  width: 50vmin;
   background: var(--background);
   border-radius: 100%;
   display: flex;
@@ -64,32 +64,32 @@ main {
 /* Timer */
 
 #timer {
-  font-size: 7vh;
+  font-size: 7vmin;
 }
 
 #statusBar {
-  margin: 3vh;
-  padding: 0 1.2vh 0 1.2vh;
-  font-size: 2vh;
+  margin: 3vmin;
+  padding: 0 1.2vmin 0 1.2vmin;
+  font-size: 2vmin;
 }
 
 #status {
-  margin: 2vh 0 2vh 0;
+  margin: 2vmin 0 2vmin 0;
 }
 
 /* Buttons */
 #buttonContainer {
-  margin-top: 12vh;
+  margin-top: 12vmin;
   text-align: center;
 }
 
 #start,
 #reset,
 #skip {
-  margin: 0 2vw;
-  width: 20vh;
-  height: 5vh;
-  font-size: 4vh;
+  margin: 0 2vmin;
+  width: 20vmin;
+  height: 5vmin;
+  font-size: 4vmin;
   padding: auto;
   color: var(--font);
   background-color: var(--background);
@@ -100,7 +100,7 @@ main {
 
 footer {
   width: 100vw;
-  text-align: right;
+  text-align: center;
 }
 
 #darkmode,
@@ -108,6 +108,8 @@ footer {
   border-radius: 10px;
   background-color: var(--background);
   color: var(--font);
-  padding: 1vh;
-  margin: 1vh;
+  padding: 1vmin;
+  margin: 1vmin;
+  width: fit-content;
+  font-size: 2vmin;
 }
