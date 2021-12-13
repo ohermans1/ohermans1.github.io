@@ -367,7 +367,8 @@ button:hover {
 
 /* !! Scroll text */
 #scroll {
-  transition: opacity 0.1s;
+  transition: opacity 0.2s;
+  transition: display 0.3s;
   position: fixed;
   bottom: 4vh;
   text-align: center;
