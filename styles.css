@@ -304,7 +304,7 @@ header {
   flex-direction: column;
   text-align: center;
   transition: opacity 1s;
-  border-radius: 20px;
+  border-radius: 5px;
   background: var(--transparentBackground);
   margin: 15vh 20vw 0 20vw;
   background: var(--background);
@@ -363,6 +363,16 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.topCorner {
+  background: var(--transparentInvertedBackground);
+  color: var(--invertedFonts);
+  padding: 2vh 4vh 2vh 2vh;
+  border-radius: 0 0 40px 0;
+  position: absolute;
+  top: 0;
+  font-size: 3vmin;
 }
 
 /* !! Scroll text */
