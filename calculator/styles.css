@@ -24,12 +24,23 @@ button {
   border: 5px inset gray;
   grid-column: span 4;
   grid-row: span 2;
-  font-size: 6vh;
+  font-size: 6vmin;
   padding: 0.7rem;
   text-align: right;
   background-color: #d5e3e4;
   margin: 1%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#screenChat {
+  font-size: 3vmin;
+}
+
+#calcName {
+  grid-column: span 4;
+  height: fit-content;
 }
 
 .grid-item-button + .equals {
@@ -54,21 +65,21 @@ button {
   transform: rotateX(31deg) rotateZ(23deg);
   transform-style: preserve-3d;
   border-radius: 32px;
-  box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+  box-shadow: 6px 6px 0 6px rgb(240, 229, 229), 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
   display: grid;
-  grid-template: repeat(7, 1fr) / repeat(4, 1fr);
-  margin: 5vh 15vw 0 auto;
+  grid-template: 0.5fr repeat(7, 1fr) / repeat(4, 1fr);
+  margin: 5vmin 15vmin 0 auto;
   width: 30vw;
-  height: 70vh;
+  height: 70vmin;
   padding: 1rem;
   background-color: whitesmoke;
 }
 
 @media screen and (orientation: portrait) {
   .grid-container-calculator {
-    width: 60vw;
-    height: 80vw;
+    width: 60vmin;
+    height: 80vmin;
     margin: 30% 11% 0 auto;
   }
   .grid-item-screen {
@@ -78,5 +89,5 @@ button {
 
 .grid-container-calculator:hover {
   transform: translate3d(0px, -25px, 0px) rotateX(31deg) rotateZ(23deg);
-  box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+  box-shadow: 6px 6px 0 6px rgb(240, 229, 229), 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }

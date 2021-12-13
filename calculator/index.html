@@ -12,8 +12,12 @@
   </head>
 
   <body>
-    <div class="grid-container-calculator">
-      <div class="grid-item-screen">0</div>
+    <div class="grid-container-calculator" id="calculator">
+      <div id="calcName">Sassculator 4000</div>
+      <div class="grid-item-screen">
+        <div id="screenNumbers">0</div>
+        <div id="screenChat">Hi... I guess</div>
+      </div>
       <div class="grid-item-button 7"><button value="7">7</button></div>
       <div class="grid-item-button 8"><button value="8">8</button></div>
       <div class="grid-item-button 9"><button value="9">9</button></div>
@@ -28,13 +32,18 @@
       <div class="grid-item-button minus"><button class="operator" value="-">-</button></div>
       <div class="grid-item-button 0"><button value="0">0</button></div>
       <div class="grid-item-button period"><button class="operator" value=".">.</button></div>
-      <div class="grid-item-button clear"><button class="operator" value="clear">C</button></div>
+      <div class="grid-item-button clear"><button class="operator" value="c">C</button></div>
       <div class="grid-item-button plus"><button class="operator" value="+">+</button></div>
       <div class="grid-item-button equals"><button id="equals" value="=">=</button></div>
-      <script src="math.js" type="text/javascript"></script>
     </div>
 
     <!-- The Javascript file is always at the bottom -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.js"
+      integrity="sha512-+lwWRCGAWhCLRPruF7ruYxRlMQuRD1H9C/Pc/HYcuxachoLufBO7OU66bfFnVsFaHQj3S/CunEimw8alVvkl+Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
