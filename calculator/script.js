@@ -1,60 +1,110 @@
-var num1 = "";
-var num2 = "";
-var operator = "";
-var answer = 0;
-var counter = 0;
-var screen = document.querySelector(".grid-item-screen");
-var potentialOperators = ["+", "-", "*", "/"];
+//!! Functions
 
-// Adjust for mobile
-// width: 50vw;
-// height: 50vh;
-var isMobile = isMobile();
-console.log(isMobile);
-
-button = document.getElementsByTagName("button");
-document.addEventListener("click", function saveVariables(e) {
-  var buttonClicked = e.target.value;
-  console.log(buttonClicked);
-  if (potentialOperators.includes(buttonClicked)) {
-    operator = buttonClicked;
-    counter += 1;
-    screen.innerHTML = num1 + " " + operator;
-  } else if (buttonClicked === "clear") {
-    num1 = "";
-    num2 = "";
-    operator = "";
-    answer = 0;
-    counter = 0;
-    screen.innerHTML = 0;
-  } else if (counter === 0 && buttonClicked >= 0) {
-    num1 = num1 + buttonClicked;
-    screen.innerHTML = num1;
-  } else if (counter !== 0 && buttonClicked >= 0) {
-    num2 = num2 + buttonClicked;
-    screen.innerHTML = num1 + " " + operator + " " + num2;
-  } else if (buttonClicked === "." && counter === 0) {
-    num1 = num1 + ".";
-    screen.innerHTML = num1;
-  } else if (buttonClicked === "." && counter !== 0) {
-    num2 = num2 + ".";
-    screen.innerHTML = num1 + " " + operator + " " + num2;
-  } else if (buttonClicked === "=") {
-    answer = num1 + operator + num2;
-    answer = eval(answer);
-    if (!Number.isInteger(answer)) {
-      answer = answer.toFixed(1);
-    }
-    screen.innerHTML = num1 + " " + operator + " " + num2 + " = " + answer;
-    num1 = answer;
-    num2 = "";
+//? This function takes the input value and sends it to another function depending on its type (operator, number, equals, clear etc)
+const takeInputs = (e) => {
+  let button = e.target;
+  let buttonValue = button.value;
+  if (button.tagName != "BUTTON") {
+    return;
   }
+  if (buttonValue >= 0 && buttonValue <= 9) {
+    saveNumbers(buttonValue);
+  } else if (operators.includes(buttonValue)) {
+    operator(buttonValue);
+  } else if (buttonValue === "=") {
+    sum(buttonValue);
+  } else if (buttonValue === "c") {
+    clear(buttonValue);
+  } else if (buttonValue === ".") {
+    decimal(buttonValue);
+  }
+};
+
+const saveNumbers = (value) => {
+  if (inUseOperator === "") {
+    number1 = number1 + value;
+    screenNumbers.innerHTML = number1;
+  } else {
+    number2 = number2 + value;
+    screenNumbers.innerHTML = number1 + " " + inUseOperator + " " + number2;
+  }
+};
+
+const operator = (value) => {
+  inUseOperator = value;
+  screenNumbers.innerHTML = number1 + " " + inUseOperator;
+};
+
+const sum = () => {
+  if (number1 === "") {
+    screenNumbers.innerHTML = "0";
+    return;
+  }
+  if (number2 === "") {
+    screenNumbers.innerHTML = number1;
+  }
+  answer = math.evaluate(number1 + inUseOperator + number2);
+  screenNumbers.innerHTML = number1 + " " + inUseOperator + " " + number2 + " = " + answer;
+  number1 = answer;
+  number2 = "";
+  inUseOperator = "";
+};
+
+const clear = (value) => {
+  number1 = "";
+  number2 = "";
+  inUseOperator = "";
+  answer = "";
+  screenNumbers.innerHTML = "0";
+  screenChat.innerHTML = "What do you want now?";
+};
+
+const decimal = (value) => {
+  if (number2 === "") {
+    if (number1.includes(".")) {
+      screenChat.innerHTML = "You can't do more then 1 decimal stupid";
+    } else {
+      number1 = number1 + value;
+      screenNumbers.innerHTML = number1;
+    }
+  } else {
+    if (number2.includes(".")) {
+      screenChat.innerHTML = "You can't do more then 1 decimal stupid";
+    } else {
+      number2 = number2 + value;
+      screenNumbers.innerHTML = number1 + " " + inUseOperator + " " + number2;
+    }
+  }
+};
+
+const sassBot = () => {
+  if (answer <= 20 && answer != "") {
+    screenChat.innerHTML = "Seriously... do you really need a calculator for that?";
+  }
+};
+
+//!! Code
+var calculatorContainer = document.getElementById("calculator");
+var screenNumbers = document.getElementById("screenNumbers");
+var screenChat = document.getElementById("screenChat");
+let answer = "";
+let operators = ["+", "*", "-", "/"];
+let inUseOperator = "";
+let number1 = "";
+let number2 = "";
+
+calculatorContainer.addEventListener("click", (e) => {
+  takeInputs(e);
+  sassBot();
 });
 
-function isMobile() {
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    return true;
-  } else {
-    return false;
-  }
-}
+/* Pseudo Code
+
+1. Add event listener to buttons.
+2. Store button values as variables.
+3. Show variables on screen.
+4. Calculate based on entries once = is pressed
+
+
+
+*/
