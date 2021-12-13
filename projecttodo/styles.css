@@ -6,22 +6,23 @@
   --med: #4b4947;
   --light: #5b5857;
   --orange: #e89e7d;
-  --white: #d4d0cd;
+  --font: #d4d0cd;
 }
 
 [data-theme="light"] {
-  --dark: #3190bc;
-  --med: #6ec5ef;
-  --light: #4db7e8;
+  --dark: #daf0fa;
+  --med: #a7b4bb;
+  --light: #899397;
   --orange: #383939;
-  --white: #d0e9f7;
+  --font: #2b3033;
 }
 
 html {
   font-family: Cairo;
   background-color: var(--med);
-  color: var(--white);
+  color: var(--font);
   width: 100vw;
+  height: auto;
 }
 
 body {
@@ -31,8 +32,8 @@ body {
 /* Header section */
 header {
   background-color: var(--dark);
-  padding: 2%;
-  font-size: 2em;
+  padding: 4vmin 8vmin 4vmin 4vmin;
+  font-size: 5vmin;
   display: flex;
   justify-content: space-between;
 }
@@ -44,18 +45,23 @@ header {
 }
 
 /* Input section */
+#inputForm {
+  font-size: 3vmin;
+}
 #projectName {
   width: 80%;
-  height: 1.5rem;
-  padding-left: 1%;
-  background-color: var(--white);
+  height: fit-content;
+  padding: 1%;
+  background-color: var(--dark);
+  color: var(--);
 }
 
 #addProjectButton {
   width: 15%;
-  height: 1.9em;
+  height: fit-content;
   background-color: var(--dark);
-  color: var(--white);
+  color: var(--font);
+  padding: 1%;
 }
 
 /* At a glance  */
@@ -76,20 +82,20 @@ header {
 
 .projectButton {
   width: 80%;
-  height: 2.5rem;
+  height: fit-content;
   background-color: var(--dark);
-  color: var(--white);
+  color: var(--font);
   border: 1px solid var(--orange);
   text-align: left;
-  padding-left: 2%;
+  padding: 1%;
   margin: 1% 2% 0 0;
-  font-size: 1.5rem;
+  font-size: 4vmin;
 }
 
 .left {
   float: right;
-  font-size: 1rem;
-  padding-top: 0.5%;
+  font-size: 2vmin;
+  padding-top: 1vmin;
   margin-right: 2%;
 }
 
@@ -100,7 +106,7 @@ header {
   border: none;
   cursor: pointer;
   overflow: hidden;
-  font-size: 2rem;
+  font-size: 4vmin;
   font-weight: 800;
 }
 
@@ -214,7 +220,7 @@ input:checked + .slider:before {
 .modalTextField {
   height: auto;
   width: 90%;
-  background-color: var(--white);
+  background-color: var(--font);
   color: var(--dark);
   padding: 1%;
   display: inline-block;
