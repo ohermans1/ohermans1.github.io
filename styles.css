@@ -578,5 +578,21 @@ footer {
   padding: 2vh;
   display: inline-block;
   margin: 4vh;
-  width: ;
+}
+
+.page404__image {
+  height: 30vmin;
+  animation: tipOver 1s linear;
+  margin-bottom: 4vh;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes tipOver {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
 }
