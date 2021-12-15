@@ -555,4 +555,28 @@ footer {
   cursor: pointer;
 }
 
-/*! Loading image */
+/*! 404 page */
+
+.no-bg {
+  background: none;
+  background-color: var(--background);
+}
+
+.page404 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.page404__link {
+  color: --fonts;
+  background: var(--invertedBackground);
+  color: var(--background);
+  border-radius: 5px;
+  padding: 2vh;
+  display: inline-block;
+  margin: 4vh;
+  width: ;
+}
