@@ -135,7 +135,7 @@ document.addEventListener("click", (e) => {
     }
     mainImg.style.backgroundImage = "url('https://www.olliehermans.com/ecommerce/images/image-product-" + imgReferenceNum + ".jpg')";
   }
-  while (document.querySelector(".shadow-box__thumbnail").classList.contains(".shadow-box__thumbnail--selected-thumbnail")) {
+  while (document.querySelector(".shadow-box__thumbnail--selected-thumbnail") != null) {
     var selectedThumbnail = document.querySelector(".shadow-box__thumbnail--selected-thumbnail");
     selectedThumbnail.classList.remove("shadow-box__thumbnail--selected-thumbnail");
   }
@@ -145,7 +145,7 @@ document.addEventListener("click", (e) => {
 //Shadow box thumbnails
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("shadow-box__thumbnail")) {
-    while (document.querySelector(".shadow-box__thumbnail").classList.contains(".shadow-box__thumbnail--selected-thumbnail")) {
+    while (document.querySelector(".shadow-box__thumbnail--selected-thumbnail") != null) {
       var selectedThumbnail = document.querySelector(".shadow-box__thumbnail--selected-thumbnail");
       selectedThumbnail.classList.remove("shadow-box__thumbnail--selected-thumbnail");
     }
