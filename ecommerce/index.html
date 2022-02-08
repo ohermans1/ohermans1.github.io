@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container-left">
+        <img src="../images/icon-menu.svg" alt="Menu" class="header__hamburger" id="mobileMenuButton" />
+
+        <img src="../images/logo.svg" alt="Logo" class="header__logo" />
+        <nav class="header__nav">
+          <ul class="header__nav-list" id="mobileMenu">
+            <img src="../images/icon-close.svg" alt="Close" class="header__close" id="mobileMenuClose" />
+            <li class="header__nav-item">Collections</li>
+            <li class="header__nav-item">Men</li>
+            <li class="header__nav-item">Women</li>
+            <li class="header__nav-item">About</li>
+            <li class="header__nav-item">Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__container-right">
+        <img src="../images/icon-cart.svg" alt="Shopping Cart" class="header__cart" id="cartButton" />
+        <div class="header__cart-counter" id="cartCounter">0</div>
+        <img src="../images/image-avatar.png" alt="Logo" class="header__avatar" />
+      </div>
+      <div class="header__cart-display" id="cartDisplay">
+        <h3 class="header__cart-display-header">Cart</h3>
+        <div class="header__cart-display-empty" id="cartEmpty">Your cart is empty</div>
+        <div class="header__full-cart-container" id="cartFull">
+          <img src="../images/image-product-1-thumbnail.jpg" alt="Cart image" class="header__cart-img" />
+          <p class="header__cart-product-name">Fall Limited Edition Sneakers</p>
+
+          <p class="header__cart-price" id="cartPrice">
+            $125.00 x <span id="totalProduct"></span> = <strong>$<span id="totalProductValue"></span>.00</strong>
+          </p>
+          <img src="../images/icon-delete.svg" alt="Delete product" class="header__trash-bin" id="clearCart" />
+          <button class="header__cart-button">Checkout</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <img src="../images/image-product-1.jpg" alt="Main Image" class="gallery__img gallery__img--selected-large" value="1" />
+        <div class="gallery__border gallery__border--selected">
+          <img src="../images/image-product-1-thumbnail.jpg " alt="Thumbnail" class="gallery__img gallery__img--selected-thumbnail gallery__thumbnail" />
+        </div>
+        <img src="../images/image-product-2.jpg" alt="Main Image" class="gallery__img gallery__img--hidden" value="2" />
+        <div class="gallery__border"><img src="../images/image-product-2-thumbnail.jpg" alt="Thumbnail" class="gallery__img gallery__img--thumbnail gallery__thumbnail" /></div>
+        <img src="../images/image-product-3.jpg" alt="Main Image" class="gallery__img gallery__img--hidden" value="3" />
+        <div class="gallery__border"><img src="../images/image-product-3-thumbnail.jpg" alt="Thumbnail" class="gallery__img gallery__img--thumbnail gallery__thumbnail" /></div>
+        <img src="../images/image-product-4.jpg" alt="Main Image" class="gallery__img gallery__img--hidden" value="4" />
+        <div class="gallery__border"><img src="../images/image-product-4-thumbnail.jpg" alt="Thumbnail" class="gallery__img gallery__img--thumbnail gallery__thumbnail" /></div>
+      </section>
+
+      <section class="product">
+        <div class="product__info">
+          <h2 class="product__heading-secondary">Sneaker Company</h2>
+          <h1 class="product__heading-main">Fall Limited Edition Sneakers</h1>
+          <p class="product__text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="product__flex">
+            <div class="product__price-container"><span class="product__price">$125.00</span><span class="product__discount">50%</span></div>
+            <span class="product__old-price">$250.00</span>
+          </div>
+        </div>
+        <div class="product__buttons">
+          <div class="product__counter">
+            <span class="product__counter-minus" id="itemMinus">&minus;</span>
+            <span class="product__counter-value" id="itemCounter">0</span>
+            <span class="product__counter-plus" id="itemPlus">&plus;</span>
+          </div>
+          <button class="product__add-to-cart" id="addToCart"><img src="../images/icon-cart.svg" alt="Shopping Cart" class="product__cart" />Add to cart</button>
+        </div>
+      </section>
+
+      <div class="shadow-box" id="shadowBox">
+        <div class="shadow-box__container">
+          <img src="../images/icon-close.svg" alt="Close" class="shadow-box__close" id="sbClose" />
+          <div class="shadow-box__main">
+            <img src="../images/icon-next.svg" alt="Next" class="shadow-box__button shadow-box__button--next" id="arrowNext" />
+            <img src="../images/icon-previous.svg" alt="Previous" class="shadow-box__button shadow-box__button--previous" id="arrowPrev" />
+            <div class="shadow-box__main-img" id="mainImage"></div>
+          </div>
+          <div class="shadow-box__thumbs">
+            <picture class="shadow-box__thumb-container"><img src="../images/image-product-1-thumbnail.jpg" alt="Thumbnail" class="shadow-box__thumbnail" value="1" id="thumb1" /></picture>
+            <picture class="shadow-box__thumb-container"><img src="../images/image-product-2-thumbnail.jpg" alt="Thumbnail" class="shadow-box__thumbnail" value="2" id="thumb2" /></picture>
+            <picture class="shadow-box__thumb-container"><img src="../images/image-product-3-thumbnail.jpg" alt="Thumbnail" class="shadow-box__thumbnail" value="3" id="thumb3" /></picture>
+            <picture class="shadow-box__thumb-container"><img src="../images/image-product-4-thumbnail.jpg" alt="Thumbnail" class="shadow-box__thumbnail" value="4" id="thumb4" /></picture>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      <span>Challenge by<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a></span>
+      <span>Coded by<a href="https://www.olliehermans.com" target="_blank"> Ollie Hermans | www.olliehermans.com</a></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
