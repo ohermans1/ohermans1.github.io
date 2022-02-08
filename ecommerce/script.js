@@ -108,7 +108,7 @@ var imgReferenceNum = 0;
 document.addEventListener("click", (e) => {
   if (e.target.getAttribute("value") > 0) {
     imgReferenceNum = e.target.getAttribute("value");
-    mainImg.style.backgroundImage = "url('images/image-product-" + imgReferenceNum + ".jpg')";
+    mainImg.style.backgroundImage = "url('../images/image-product-" + imgReferenceNum + ".jpg')";
     if (document.getElementById("shadow-box__thumbnail--selected-thumbnail") === null) {
       document.getElementById("thumb" + imgReferenceNum).classList.add("shadow-box__thumbnail--selected-thumbnail");
     }
@@ -126,14 +126,14 @@ document.addEventListener("click", (e) => {
     } else {
       imgReferenceNum++;
     }
-    mainImg.style.backgroundImage = "url('images/image-product-" + imgReferenceNum + ".jpg')";
+    mainImg.style.backgroundImage = "url('../images/image-product-" + imgReferenceNum + ".jpg')";
   } else if (e.target === arrowPrev) {
     if (imgReferenceNum === 1 || imgReferenceNum === "1") {
       imgReferenceNum = 4;
     } else {
       imgReferenceNum--;
     }
-    mainImg.style.backgroundImage = "url('images/image-product-" + imgReferenceNum + ".jpg')";
+    mainImg.style.backgroundImage = "url('../images/image-product-" + imgReferenceNum + ".jpg')";
   }
   while (document.querySelector(".shadow-box__thumbnail").classList.contains(".shadow-box__thumbnail--selected-thumbnail")) {
     var selectedThumbnail = document.querySelector(".shadow-box__thumbnail--selected-thumbnail");
