@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet" />
+
+    <title>Frontend Mentor | Launch countdown timer</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1>We're launching soon</h1>
+
+      <div class="countdown" id="clockdiv">
+        <div class="countdown__time-group"><span class="countdown__time days" id="daysSpan"></span><span class="countdown__title">Days</span></div>
+        <div class="countdown__time-group"><span class="countdown__time hours" id="hoursSpan"></span><span class="countdown__title">Hours</span></div>
+        <div class="countdown__time-group"><span class="countdown__time minutes" id="minutesSpan"></span><span class="countdown__title">Minutes</span></div>
+        <div class="countdown__time-group"><span class="countdown__time seconds" id="secondsSpan"></span><span class="countdown__title">Seconds</span></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <img src="../images/icon-facebook.svg" alt="Facebook Icon" class="footer__icon" />
+      <img src="../images/icon-pinterest.svg" alt="Pinterest Icon" class="footer__icon" />
+      <img src="../images/icon-instagram.svg" alt="Instagram Icon" class="footer__icon" />
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
