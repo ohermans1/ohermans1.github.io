@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ohermans1/ohermans1.github.io.git/static/css/main.eb7c4f61.css",
+    "main.js": "/ohermans1/ohermans1.github.io.git/static/js/main.8b6a12f3.js",
+    "index.html": "/ohermans1/ohermans1.github.io.git/index.html",
+    "main.eb7c4f61.css.map": "/ohermans1/ohermans1.github.io.git/static/css/main.eb7c4f61.css.map",
+    "main.8b6a12f3.js.map": "/ohermans1/ohermans1.github.io.git/static/js/main.8b6a12f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb7c4f61.css",
+    "static/js/main.8b6a12f3.js"
+  ]
+}
