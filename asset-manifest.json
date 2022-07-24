@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f1fe2a75.css",
+    "main.js": "/static/js/main.949077ca.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/maisie-and-me.webp": "/static/media/maisie-and-me.9f6f202d289d737074b4.webp",
+    "index.html": "/index.html",
+    "static/media/arrow_up.svg": "/static/media/arrow_up.ffd3b0c39b49a85c6a379e10e122296a.svg",
+    "static/media/arrow_down.svg": "/static/media/arrow_down.69d97795f8eb44a8440aa8363784b0de.svg",
+    "static/media/arrow_send.svg": "/static/media/arrow_send.9b052544669ee52252f77a50b7a9da0a.svg",
+    "static/media/navigate_next.svg": "/static/media/navigate_next.b27c783b409fb1613644166bc694df53.svg",
+    "static/media/navigate_before.svg": "/static/media/navigate_before.03a9dc01956e3ed18d0afab910a1efd9.svg",
+    "main.f1fe2a75.css.map": "/static/css/main.f1fe2a75.css.map",
+    "main.949077ca.js.map": "/static/js/main.949077ca.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1fe2a75.css",
+    "static/js/main.949077ca.js"
+  ]
+}
